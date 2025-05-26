@@ -65,6 +65,8 @@ pip install -r requirements.txt
 ## 2. Environment
 Please follow [StableToolBench](https://github.com/THUNLP-MT/StableToolBench/tree/master) to download the dataset, and deploy tool server.
 
+Add your api key in `openai_key.json`, `inference_chatgpt_testing.sh`, `inference_chatgpt_training`, and `run_pass_rate.sh`.
+
 ## 3. Usage
 
 ### Running on Training Set
