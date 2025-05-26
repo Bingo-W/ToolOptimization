@@ -1,0 +1,2608 @@
+[
+    {
+        "api_list": [
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "GetRelatedVideos",
+                "api_description": "",
+                "required_parameters": [
+                    {
+                        "name": "category",
+                        "type": "STRING",
+                        "description": "The name of the category.",
+                        "default": ""
+                    },
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json or xml or php",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "The page number to show.",
+                        "default": ""
+                    },
+                    {
+                        "name": "per_page",
+                        "type": "NUMBER",
+                        "description": "Number of items to show on each page. Max 50.",
+                        "default": ""
+                    },
+                    {
+                        "name": "summary_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back more information.",
+                        "default": ""
+                    },
+                    {
+                        "name": "full_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back the full video information.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "GetChannelInfo",
+                "api_description": "Get the information on a single channel.",
+                "required_parameters": [
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json/xml/php",
+                        "default": ""
+                    },
+                    {
+                        "name": "channel_id",
+                        "type": "STRING",
+                        "description": "The numeric id of the channel or its url name.",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "SearchVideos",
+                "api_description": "Search for videos.",
+                "required_parameters": [
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json/xml/php",
+                        "default": ""
+                    },
+                    {
+                        "name": "query",
+                        "type": "STRING",
+                        "description": "The search terms",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "user_id",
+                        "type": "STRING",
+                        "description": "The ID number or username of the user.",
+                        "default": ""
+                    },
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "The page number to show.",
+                        "default": ""
+                    },
+                    {
+                        "name": "per_page",
+                        "type": "NUMBER",
+                        "description": "Number of items to show on each page. Max 50.",
+                        "default": ""
+                    },
+                    {
+                        "name": "summary_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back more information.",
+                        "default": ""
+                    },
+                    {
+                        "name": "full_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back the full video information.",
+                        "default": ""
+                    },
+                    {
+                        "name": "sort",
+                        "type": "STRING",
+                        "description": "Method to sort by: relevant, newest, oldest, most_played, most_commented, or most_liked.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Tools",
+                "tool_name": "YTStream - Download YouTube Videos",
+                "api_name": "Download/Stream",
+                "api_description": "Stream or download info.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "Youtube Video Id.",
+                        "default": "UxxajLWwzqY"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cgeo",
+                        "type": "STRING",
+                        "description": "Country code in ISO 3166 format of the end user.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": "{\"status\": \"str\", \"id\": \"str\", \"title\": \"str\", \"lengthSeconds\": \"str\", \"keywords\": [\"list of str with length 18\"], \"channelTitle\": \"str\", \"channelId\": \"str\", \"description\": \"str\", \"thumbnail\": [{\"url\": \"str\", \"width\": \"int\", \"height\": \"int\", \"_list_length\": 4}], \"allowRatings\": \"bool\", \"viewCount\": \"NoneType\", \"isPrivate\": \"bool\", \"isUnpluggedCorpus\": \"bool\", \"isLiveContent\": \"bool\", \"storyboards\": [{\"width\": \"str\", \"height\": \"str\", \"thumbsCount\": \"str\", \"columns\": \"str\", \"rows\": \"str\", \"interval\": \"str\", \"storyboardCount\": \"int\", \"url\": [\"list of str with length 1\"], \"_list_length\": 3}], \"expiresInSeconds\": \"str\", \"formats\": [{\"itag\": \"int\", \"url\": \"str\", \"mimeType\": \"str\", \"bitrate\": \"int\", \"width\": \"int\", \"height\": \"int\", \"lastModified\": \"str\", \"contentLength\": \"str\", \"quality\": \"str\", \"fps\": \"int\", \"qualityLabel\": \"str\", \"projectionType\": \"str\", \"averageBitrate\": \"int\", \"audioQuality\": \"str\", \"approxDurationMs\": \"str\", \"audioSampleRate\": \"str\", \"audioChannels\": \"int\", \"_list_length"
+            }
+        ],
+        "query": "I'm planning a beach vacation with my friends and we want to capture some amazing moments. Can you suggest some popular videos from the 'Travel' category on Vimeo? Also, provide us with information on how to download and stream these videos using the YTStream - Download YouTube Videos tool.",
+        "relevant APIs": [
+            [
+                "Vimeo",
+                "GetRelatedVideos"
+            ],
+            [
+                "Vimeo",
+                "SearchVideos"
+            ],
+            [
+                "YTStream - Download YouTube Videos",
+                "Download/Stream"
+            ]
+        ],
+        "query_id": 4278
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "GetRelatedVideos",
+                "api_description": "",
+                "required_parameters": [
+                    {
+                        "name": "category",
+                        "type": "STRING",
+                        "description": "The name of the category.",
+                        "default": ""
+                    },
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json or xml or php",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "The page number to show.",
+                        "default": ""
+                    },
+                    {
+                        "name": "per_page",
+                        "type": "NUMBER",
+                        "description": "Number of items to show on each page. Max 50.",
+                        "default": ""
+                    },
+                    {
+                        "name": "summary_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back more information.",
+                        "default": ""
+                    },
+                    {
+                        "name": "full_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back the full video information.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "GetChannelInfo",
+                "api_description": "Get the information on a single channel.",
+                "required_parameters": [
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json/xml/php",
+                        "default": ""
+                    },
+                    {
+                        "name": "channel_id",
+                        "type": "STRING",
+                        "description": "The numeric id of the channel or its url name.",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "SearchVideos",
+                "api_description": "Search for videos.",
+                "required_parameters": [
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json/xml/php",
+                        "default": ""
+                    },
+                    {
+                        "name": "query",
+                        "type": "STRING",
+                        "description": "The search terms",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "user_id",
+                        "type": "STRING",
+                        "description": "The ID number or username of the user.",
+                        "default": ""
+                    },
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "The page number to show.",
+                        "default": ""
+                    },
+                    {
+                        "name": "per_page",
+                        "type": "NUMBER",
+                        "description": "Number of items to show on each page. Max 50.",
+                        "default": ""
+                    },
+                    {
+                        "name": "summary_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back more information.",
+                        "default": ""
+                    },
+                    {
+                        "name": "full_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back the full video information.",
+                        "default": ""
+                    },
+                    {
+                        "name": "sort",
+                        "type": "STRING",
+                        "description": "Method to sort by: relevant, newest, oldest, most_played, most_commented, or most_liked.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Tools",
+                "tool_name": "YTStream - Download YouTube Videos",
+                "api_name": "Download/Stream",
+                "api_description": "Stream or download info.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "Youtube Video Id.",
+                        "default": "UxxajLWwzqY"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cgeo",
+                        "type": "STRING",
+                        "description": "Country code in ISO 3166 format of the end user.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": "{\"status\": \"str\", \"id\": \"str\", \"title\": \"str\", \"lengthSeconds\": \"str\", \"keywords\": [\"list of str with length 18\"], \"channelTitle\": \"str\", \"channelId\": \"str\", \"description\": \"str\", \"thumbnail\": [{\"url\": \"str\", \"width\": \"int\", \"height\": \"int\", \"_list_length\": 4}], \"allowRatings\": \"bool\", \"viewCount\": \"NoneType\", \"isPrivate\": \"bool\", \"isUnpluggedCorpus\": \"bool\", \"isLiveContent\": \"bool\", \"storyboards\": [{\"width\": \"str\", \"height\": \"str\", \"thumbsCount\": \"str\", \"columns\": \"str\", \"rows\": \"str\", \"interval\": \"str\", \"storyboardCount\": \"int\", \"url\": [\"list of str with length 1\"], \"_list_length\": 3}], \"expiresInSeconds\": \"str\", \"formats\": [{\"itag\": \"int\", \"url\": \"str\", \"mimeType\": \"str\", \"bitrate\": \"int\", \"width\": \"int\", \"height\": \"int\", \"lastModified\": \"str\", \"contentLength\": \"str\", \"quality\": \"str\", \"fps\": \"int\", \"qualityLabel\": \"str\", \"projectionType\": \"str\", \"averageBitrate\": \"int\", \"audioQuality\": \"str\", \"approxDurationMs\": \"str\", \"audioSampleRate\": \"str\", \"audioChannels\": \"int\", \"_list_length"
+            }
+        ],
+        "query": "I'm organizing a film festival and I want to showcase some award-winning short films. Can you suggest some videos from the 'Short Films' category on Vimeo? Additionally, provide me with information on how to download and stream these videos using the YTStream - Download YouTube Videos tool.",
+        "relevant APIs": [
+            [
+                "Vimeo",
+                "GetRelatedVideos"
+            ],
+            [
+                "Vimeo",
+                "SearchVideos"
+            ],
+            [
+                "YTStream - Download YouTube Videos",
+                "Download/Stream"
+            ]
+        ],
+        "query_id": 4284
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "GetRelatedVideos",
+                "api_description": "",
+                "required_parameters": [
+                    {
+                        "name": "category",
+                        "type": "STRING",
+                        "description": "The name of the category.",
+                        "default": ""
+                    },
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json or xml or php",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "The page number to show.",
+                        "default": ""
+                    },
+                    {
+                        "name": "per_page",
+                        "type": "NUMBER",
+                        "description": "Number of items to show on each page. Max 50.",
+                        "default": ""
+                    },
+                    {
+                        "name": "summary_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back more information.",
+                        "default": ""
+                    },
+                    {
+                        "name": "full_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back the full video information.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "GetChannelInfo",
+                "api_description": "Get the information on a single channel.",
+                "required_parameters": [
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json/xml/php",
+                        "default": ""
+                    },
+                    {
+                        "name": "channel_id",
+                        "type": "STRING",
+                        "description": "The numeric id of the channel or its url name.",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "SearchVideos",
+                "api_description": "Search for videos.",
+                "required_parameters": [
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json/xml/php",
+                        "default": ""
+                    },
+                    {
+                        "name": "query",
+                        "type": "STRING",
+                        "description": "The search terms",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "user_id",
+                        "type": "STRING",
+                        "description": "The ID number or username of the user.",
+                        "default": ""
+                    },
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "The page number to show.",
+                        "default": ""
+                    },
+                    {
+                        "name": "per_page",
+                        "type": "NUMBER",
+                        "description": "Number of items to show on each page. Max 50.",
+                        "default": ""
+                    },
+                    {
+                        "name": "summary_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back more information.",
+                        "default": ""
+                    },
+                    {
+                        "name": "full_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back the full video information.",
+                        "default": ""
+                    },
+                    {
+                        "name": "sort",
+                        "type": "STRING",
+                        "description": "Method to sort by: relevant, newest, oldest, most_played, most_commented, or most_liked.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Tools",
+                "tool_name": "YTStream - Download YouTube Videos",
+                "api_name": "Download/Stream",
+                "api_description": "Stream or download info.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "Youtube Video Id.",
+                        "default": "UxxajLWwzqY"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cgeo",
+                        "type": "STRING",
+                        "description": "Country code in ISO 3166 format of the end user.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": "{\"status\": \"str\", \"id\": \"str\", \"title\": \"str\", \"lengthSeconds\": \"str\", \"keywords\": [\"list of str with length 18\"], \"channelTitle\": \"str\", \"channelId\": \"str\", \"description\": \"str\", \"thumbnail\": [{\"url\": \"str\", \"width\": \"int\", \"height\": \"int\", \"_list_length\": 4}], \"allowRatings\": \"bool\", \"viewCount\": \"NoneType\", \"isPrivate\": \"bool\", \"isUnpluggedCorpus\": \"bool\", \"isLiveContent\": \"bool\", \"storyboards\": [{\"width\": \"str\", \"height\": \"str\", \"thumbsCount\": \"str\", \"columns\": \"str\", \"rows\": \"str\", \"interval\": \"str\", \"storyboardCount\": \"int\", \"url\": [\"list of str with length 1\"], \"_list_length\": 3}], \"expiresInSeconds\": \"str\", \"formats\": [{\"itag\": \"int\", \"url\": \"str\", \"mimeType\": \"str\", \"bitrate\": \"int\", \"width\": \"int\", \"height\": \"int\", \"lastModified\": \"str\", \"contentLength\": \"str\", \"quality\": \"str\", \"fps\": \"int\", \"qualityLabel\": \"str\", \"projectionType\": \"str\", \"averageBitrate\": \"int\", \"audioQuality\": \"str\", \"approxDurationMs\": \"str\", \"audioSampleRate\": \"str\", \"audioChannels\": \"int\", \"_list_length"
+            }
+        ],
+        "query": "I'm a music producer and I'm looking for music videos to get inspiration for my next project. Can you help me find videos from the 'Music' category on Vimeo? Additionally, provide me with information on how to download and stream these videos using the YTStream - Download YouTube Videos tool.",
+        "relevant APIs": [
+            [
+                "Vimeo",
+                "GetRelatedVideos"
+            ],
+            [
+                "Vimeo",
+                "SearchVideos"
+            ],
+            [
+                "YTStream - Download YouTube Videos",
+                "Download/Stream"
+            ]
+        ],
+        "query_id": 4285
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Magic AliExpress",
+                "api_name": "/api/product/{productId}/historic/sales",
+                "api_description": "This endpoint returns the sales historic of product loaded by a client",
+                "required_parameters": [
+                    {
+                        "name": "productId",
+                        "type": "string",
+                        "description": "",
+                        "default": "1005002011652590"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "minDate",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "maxDate",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Magic AliExpress",
+                "api_name": "/api/bestSales/SortedByNewest",
+                "api_description": "Retrieves the last best product added in the system",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "limit",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "10"
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Magic AliExpress",
+                "api_name": "/api/products/search",
+                "api_description": "Search a product by his name",
+                "required_parameters": [
+                    {
+                        "name": "name",
+                        "type": "STRING",
+                        "description": "Filter the products compatible with the name",
+                        "default": "Playstation"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "getShopInformation",
+                        "type": "BOOLEAN",
+                        "description": "",
+                        "default": "false"
+                    },
+                    {
+                        "name": "lg",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "shipToCountry",
+                        "type": "STRING",
+                        "description": "Filter the products that can be to ship to the country wished. you can use the service countriesAvailable to set the country wished.",
+                        "default": "FR"
+                    },
+                    {
+                        "name": "minSalePrice",
+                        "type": "NUMBER",
+                        "description": "Filter products by the min Sale price",
+                        "default": 5
+                    },
+                    {
+                        "name": "targetCurrency",
+                        "type": "STRING",
+                        "description": "Represents the currency whished when the product is retrieved",
+                        "default": ""
+                    },
+                    {
+                        "name": "shipFromCountry",
+                        "type": "STRING",
+                        "description": "Filter the products that can be to ship from  country wished. you can use the service countriesAvailable to set the good information.",
+                        "default": "CN"
+                    },
+                    {
+                        "name": "fastDelivery",
+                        "type": "BOOLEAN",
+                        "description": "Filter products that are compatible with fast delivery",
+                        "default": "true"
+                    },
+                    {
+                        "name": "maxSalePrice",
+                        "type": "NUMBER",
+                        "description": "Filter products by the max Sale price",
+                        "default": ""
+                    },
+                    {
+                        "name": "sort",
+                        "type": "STRING",
+                        "description": "the products are sorted",
+                        "default": "NEWEST_DESC"
+                    },
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "Represents the page wished",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Commerce",
+                "tool_name": "AliExpress unofficial",
+                "api_name": "/shipping/{id}",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "4000886597329"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "count",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    },
+                    {
+                        "name": "locale",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "country",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "currency",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Commerce",
+                "tool_name": "AliExpress unofficial",
+                "api_name": "/product/{id}",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "4000886597329"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "locale",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "currency",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "country",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Commerce",
+                "tool_name": "AliExpress unofficial",
+                "api_name": "/feedbacks/{id}",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "4000886597329"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "withPictures",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    },
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm planning to start an eCommerce business and I need to gather information about different companies. Please provide me with a list of logistics companies along with their images and additional data. Also, fetch the feedbacks for a product with ID 4000886597329 and display any available pictures.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "AliExpress unofficial",
+                "/feedbacks/{id}"
+            ]
+        ],
+        "query_id": 2180
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Finance",
+                "tool_name": "Quandl",
+                "api_name": "Get time-series data and metadata",
+                "api_description": "This call returns data and metadata for a given time-series.",
+                "required_parameters": [
+                    {
+                        "name": "database_code",
+                        "type": "STRING",
+                        "description": "The code for the database this time-series belongs to",
+                        "default": "WIKI"
+                    },
+                    {
+                        "name": "return_format",
+                        "type": "STRING",
+                        "description": "json, xml or csv",
+                        "default": "json"
+                    },
+                    {
+                        "name": "dataset_code",
+                        "type": "STRING",
+                        "description": "The code for this time-series",
+                        "default": "FB"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "dataset": {
+                        "id": "int",
+                        "dataset_code": "str",
+                        "database_code": "str",
+                        "name": "str",
+                        "description": "str",
+                        "refreshed_at": "str",
+                        "newest_available_date": "str",
+                        "oldest_available_date": "str",
+                        "column_names": [
+                            "list of str with length 13"
+                        ],
+                        "frequency": "str",
+                        "type": "str",
+                        "premium": "bool",
+                        "limit": "NoneType",
+                        "transform": "NoneType",
+                        "column_index": "NoneType",
+                        "start_date": "str",
+                        "end_date": "str",
+                        "data": [
+                            "list of list with length 1472"
+                        ],
+                        "collapse": "NoneType",
+                        "order": "NoneType",
+                        "database_id": "int"
+                    }
+                }
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Quandl",
+                "api_name": "Get metadata for a time-series database",
+                "api_description": "You can retrieve metadata for a specified time-series database",
+                "required_parameters": [
+                    {
+                        "name": "database_code",
+                        "type": "STRING",
+                        "description": "The code for the database this time-series belongs to",
+                        "default": "WIKI"
+                    },
+                    {
+                        "name": "return_format",
+                        "type": "STRING",
+                        "description": "json, xml or csv",
+                        "default": "json"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "database": {
+                        "id": "int",
+                        "name": "str",
+                        "database_code": "str",
+                        "description": "str",
+                        "datasets_count": "int",
+                        "downloads": "int",
+                        "premium": "bool",
+                        "image": "str",
+                        "favorite": "bool",
+                        "url_name": "str",
+                        "exclusive": "bool"
+                    }
+                }
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Quandl",
+                "api_name": "Get time-series metadata",
+                "api_description": "This call returns metadata for a specified time-series.",
+                "required_parameters": [
+                    {
+                        "name": "return_format",
+                        "type": "STRING",
+                        "description": "json, xml or csv",
+                        "default": "json"
+                    },
+                    {
+                        "name": "database_code",
+                        "type": "STRING",
+                        "description": "The code for the database this time-series belongs to",
+                        "default": "WIKI"
+                    },
+                    {
+                        "name": "dataset_code",
+                        "type": "STRING",
+                        "description": "The code for this time-series",
+                        "default": "FB"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "dataset": {
+                        "id": "int",
+                        "dataset_code": "str",
+                        "database_code": "str",
+                        "name": "str",
+                        "description": "str",
+                        "refreshed_at": "str",
+                        "newest_available_date": "str",
+                        "oldest_available_date": "str",
+                        "column_names": [
+                            "list of str with length 13"
+                        ],
+                        "frequency": "str",
+                        "type": "str",
+                        "premium": "bool",
+                        "database_id": "int"
+                    }
+                }
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Morning Star",
+                "api_name": "stock/v2/get-financial-details",
+                "api_description": "Mapped to Expand Details View section found in Financials  tab",
+                "required_parameters": [
+                    {
+                        "name": "performanceId",
+                        "type": "STRING",
+                        "description": "Value of performanceId field from .../auto-complete or /get-summary or .../get-movers endpoints",
+                        "default": "0P0000OQN8"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "dataType",
+                        "type": "STRING",
+                        "description": "One of the following : A - Annual | Q - Quarterly",
+                        "default": "A"
+                    },
+                    {
+                        "name": "reportType",
+                        "type": "STRING",
+                        "description": "One of the following : R - Restated | A - As originally reported",
+                        "default": "A"
+                    },
+                    {
+                        "name": "type",
+                        "type": "STRING",
+                        "description": "One of the following : balanceSheet|cashFlow|incomeStatement",
+                        "default": "incomeStatement"
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Morning Star",
+                "api_name": "stock/v2/key-stats/get-overview",
+                "api_description": "Get key stats overview in the Valuation tab",
+                "required_parameters": [
+                    {
+                        "name": "performanceId",
+                        "type": "STRING",
+                        "description": "Value of performanceId field from .../auto-complete or /get-summary or .../get-movers endpoints",
+                        "default": "0P0000OQN8"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Morning Star",
+                "api_name": "{type}/parent/get-recent-investment-rating-change",
+                "api_description": "Get recent investment rating change as displayed in the Parent tab",
+                "required_parameters": [
+                    {
+                        "name": "type",
+                        "type": "string",
+                        "description": "One of the following values : etf|fund",
+                        "default": "etf"
+                    },
+                    {
+                        "name": "securityId",
+                        "type": "STRING",
+                        "description": "The value of securityId field returned in .../market/v2/get-returns",
+                        "default": "F00000O2CG"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Events",
+                "tool_name": "Public Holiday",
+                "api_name": "Public Holidays",
+                "api_description": "Returns the public holidays from a given year and country.",
+                "required_parameters": [
+                    {
+                        "name": "CountryCode",
+                        "type": "STRING",
+                        "description": "CountryCode",
+                        "default": "US"
+                    },
+                    {
+                        "name": "Year",
+                        "type": "STRING",
+                        "description": "Year",
+                        "default": "2019"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "date": "str",
+                    "localName": "str",
+                    "name": "str",
+                    "countryCode": "str",
+                    "fixed": "bool",
+                    "global": "bool",
+                    "counties": "NoneType",
+                    "launchYear": "NoneType",
+                    "type": "str"
+                }
+            }
+        ],
+        "query": "I'm planning to invest in ETFs and I need information about recent investment rating changes. Can you fetch the recent investment rating change for a specific ETF from Morning Star? Additionally, I would like to know the public holidays in the US for the year 2019.",
+        "relevant APIs": [
+            [
+                "Morning Star",
+                "{type}/parent/get-recent-investment-rating-change"
+            ],
+            [
+                "Public Holiday",
+                "Public Holidays"
+            ]
+        ],
+        "query_id": 2270
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Magic AliExpress",
+                "api_name": "/api/shipping/{productID}",
+                "api_description": "This ressource displays the shipping information for one product",
+                "required_parameters": [
+                    {
+                        "name": "productID",
+                        "type": "NUMBER",
+                        "description": "The Aliexpress product ID",
+                        "default": "4000961087745"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "toCountry",
+                        "type": "STRING",
+                        "description": "The country to calcul the freight ",
+                        "default": "FR"
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Magic AliExpress",
+                "api_name": "/api/v2/categories",
+                "api_description": "This resource represents a category in the system. We have 3 provider type <br> - API\n -WEBSITE\n -HYBRID\n <br> 1.API<br> This category is manager by the API, the ID indicated is the Alibaba ID and not Aliexpress ID.<br> 2. WESITE <br> This category is scraping of Aliexpress website <br> 3. HYBRID <br> This category has correspondence between Aliexpress and API; you have in the same object twice ID `alie_category_id` for Website and `api_category_id` for API<br> In the API to request by example product, in the category ID, you can indicate the both.  ",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Magic AliExpress",
+                "api_name": "/api/bestSales/product/{productID}/pricesHistory",
+                "api_description": "This resource returns the historic of prices",
+                "required_parameters": [
+                    {
+                        "name": "productID",
+                        "type": "NUMBER",
+                        "description": "The Aliexpress product ID",
+                        "default": "4001017422834"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "minDate",
+                        "type": "STRING",
+                        "description": "filter the historic min date",
+                        "default": "2020-09-28"
+                    },
+                    {
+                        "name": "maxDate",
+                        "type": "STRING",
+                        "description": "filter the historic by max date",
+                        "default": "2021-08-05"
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm starting an eCommerce business and I need to find a reliable shipping company. Can you provide me with a list of logistics companies? I'd also like to check the shipping information for a specific product with the Aliexpress ID 4001017422834 to see its price history.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Magic AliExpress",
+                "/api/bestSales/product/{productID}/pricesHistory"
+            ]
+        ],
+        "query_id": 11955
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Finance",
+                "tool_name": "Corporate Supply Chain",
+                "api_name": "Supply Chain",
+                "api_description": "Get supply chain information.",
+                "required_parameters": [
+                    {
+                        "name": "ticker",
+                        "type": "STRING",
+                        "description": "Enter the stock symbol for the company",
+                        "default": "IBM"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "Ticker": "str",
+                    "Full Name": "str",
+                    "Relationship": "str"
+                }
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_reviews",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "sku",
+                        "type": "STRING",
+                        "description": "Found under 'data_layer' > 'goods' > 'sku' in result of get_product",
+                        "default": "470512201"
+                    },
+                    {
+                        "name": "spu",
+                        "type": "STRING",
+                        "description": "Found under 'good_info' > 'goodsSpu' in result of get_product",
+                        "default": "4705122"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_shipping",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "country_code",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "CO"
+                    },
+                    {
+                        "name": "product_url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "smart-watches/pp_009238562599.html"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "num",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_top_searches",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm a small business owner and I'm looking for logistics companies to handle my product shipments. Can you provide me with a list of reliable logistics companies? Also, find out the shipping details for a specific product on Gearbest to compare the options.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Gearbest",
+                "/get_shipping"
+            ]
+        ],
+        "query_id": 14686
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "GetChannelVideos",
+                "api_description": "Get a list of the videos in a channel.",
+                "required_parameters": [
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json/xml/php",
+                        "default": ""
+                    },
+                    {
+                        "name": "channel_id",
+                        "type": "STRING",
+                        "description": "The numeric id of the channel or its url name.",
+                        "default": ""
+                    },
+                    {
+                        "name": "full_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back the full video information",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "user_id",
+                        "type": "STRING",
+                        "description": "The ID number or username of the user. A token may be used instead.",
+                        "default": ""
+                    },
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "The page number to show.",
+                        "default": ""
+                    },
+                    {
+                        "name": "per_page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "Number of items to show on each page. Max 50."
+                    },
+                    {
+                        "name": "summary_response",
+                        "type": "BOOLEAN",
+                        "description": "Set this parameter to get back more information.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "GetRelatedPeople",
+                "api_description": "Get a list of related people for a category.",
+                "required_parameters": [
+                    {
+                        "name": "category",
+                        "type": "STRING",
+                        "description": "The name of the category.",
+                        "default": ""
+                    },
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json or xml or php",
+                        "default": "json"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "The page number to show.",
+                        "default": ""
+                    },
+                    {
+                        "name": "per_page",
+                        "type": "NUMBER",
+                        "description": "Number of items to show on each page. Max 50.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "generated_in": "str",
+                    "stat": "str",
+                    "err": {
+                        "code": "str",
+                        "expl": "str",
+                        "msg": "str"
+                    }
+                }
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "Vimeo",
+                "api_name": "GetAllChannels",
+                "api_description": "Get a list of all public channels.",
+                "required_parameters": [
+                    {
+                        "name": "format",
+                        "type": "STRING",
+                        "description": "json/xml/php",
+                        "default": ""
+                    },
+                    {
+                        "name": "per_page",
+                        "type": "STRING",
+                        "description": "Number of items to show on each page. Max 50.",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "sort",
+                        "type": "STRING",
+                        "description": "Method to sort by: newest, oldest, alphabetical, most_videos, most_subscribed, or most_recently_updated.",
+                        "default": "most_recently_updated"
+                    },
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "The page number to show.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Tools",
+                "tool_name": "YTStream - Download YouTube Videos",
+                "api_name": "Download/Stream",
+                "api_description": "Stream or download info.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "Youtube Video Id.",
+                        "default": "UxxajLWwzqY"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "cgeo",
+                        "type": "STRING",
+                        "description": "Country code in ISO 3166 format of the end user.",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": "{\"status\": \"str\", \"id\": \"str\", \"title\": \"str\", \"lengthSeconds\": \"str\", \"keywords\": [\"list of str with length 18\"], \"channelTitle\": \"str\", \"channelId\": \"str\", \"description\": \"str\", \"thumbnail\": [{\"url\": \"str\", \"width\": \"int\", \"height\": \"int\", \"_list_length\": 4}], \"allowRatings\": \"bool\", \"viewCount\": \"NoneType\", \"isPrivate\": \"bool\", \"isUnpluggedCorpus\": \"bool\", \"isLiveContent\": \"bool\", \"storyboards\": [{\"width\": \"str\", \"height\": \"str\", \"thumbsCount\": \"str\", \"columns\": \"str\", \"rows\": \"str\", \"interval\": \"str\", \"storyboardCount\": \"int\", \"url\": [\"list of str with length 1\"], \"_list_length\": 3}], \"expiresInSeconds\": \"str\", \"formats\": [{\"itag\": \"int\", \"url\": \"str\", \"mimeType\": \"str\", \"bitrate\": \"int\", \"width\": \"int\", \"height\": \"int\", \"lastModified\": \"str\", \"contentLength\": \"str\", \"quality\": \"str\", \"fps\": \"int\", \"qualityLabel\": \"str\", \"projectionType\": \"str\", \"averageBitrate\": \"int\", \"audioQuality\": \"str\", \"approxDurationMs\": \"str\", \"audioSampleRate\": \"str\", \"audioChannels\": \"int\", \"_list_length"
+            }
+        ],
+        "query": "I'm a film student and I'm looking for some educational resources. Can you recommend some channels on Vimeo that provide tutorials and insights into different categories of filmmaking? It would be great if you could provide the full video information and the related people in the industry. Also, is it possible to download or stream these videos using a specific tool? Thank you!",
+        "relevant APIs": [
+            [
+                "Vimeo",
+                "GetAllChannels"
+            ],
+            [
+                "Vimeo",
+                "GetChannelVideos"
+            ],
+            [
+                "Vimeo",
+                "GetRelatedPeople"
+            ],
+            [
+                "YTStream - Download YouTube Videos",
+                "Download/Stream"
+            ]
+        ],
+        "query_id": 14950
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_shipping",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "country_code",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "CO"
+                    },
+                    {
+                        "name": "product_url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "smart-watches/pp_009238562599.html"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "num",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_reviews",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "sku",
+                        "type": "STRING",
+                        "description": "Found under 'data_layer' > 'goods' > 'sku' in result of get_product",
+                        "default": "470512201"
+                    },
+                    {
+                        "name": "spu",
+                        "type": "STRING",
+                        "description": "Found under 'good_info' > 'goodsSpu' in result of get_product",
+                        "default": "4705122"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/categories",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "main_category",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Car Electronics"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Corporate Supply Chain",
+                "api_name": "Supply Chain",
+                "api_description": "Get supply chain information.",
+                "required_parameters": [
+                    {
+                        "name": "ticker",
+                        "type": "STRING",
+                        "description": "Enter the stock symbol for the company",
+                        "default": "IBM"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "Ticker": "str",
+                    "Full Name": "str",
+                    "Relationship": "str"
+                }
+            }
+        ],
+        "query": "My company is interested in partnering with logistics companies. Can you provide me with a list of logistics companies along with their images? Additionally, I would like to know the shipping options for a specific product with the URL 'smart-watches/pp_009238562599.html'.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Gearbest",
+                "/get_shipping"
+            ]
+        ],
+        "query_id": 17373
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_top_searches",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/search",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "query",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Xiaomi"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/categories",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "main_category",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Car Electronics"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm planning a family gathering and I need to order logistics services to transport the gathering supplies. Can you suggest some logistics companies that offer transportation services for family events? Also, I would like to explore different categories of products available on Gearbest to find some party essentials.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Gearbest",
+                "/categories"
+            ]
+        ],
+        "query_id": 19298
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Corporate Supply Chain",
+                "api_name": "Supply Chain",
+                "api_description": "Get supply chain information.",
+                "required_parameters": [
+                    {
+                        "name": "ticker",
+                        "type": "STRING",
+                        "description": "Enter the stock symbol for the company",
+                        "default": "IBM"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "Ticker": "str",
+                    "Full Name": "str",
+                    "Relationship": "str"
+                }
+            }
+        ],
+        "query": "My friend is starting a new business and needs to find reliable logistics companies. Can you provide a list of logistics companies along with their images and additional data? Also, please provide the supply chain information for IBM.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Corporate Supply Chain",
+                "Supply Chain"
+            ]
+        ],
+        "query_id": 20121
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Corporate Supply Chain",
+                "api_name": "Supply Chain",
+                "api_description": "Get supply chain information.",
+                "required_parameters": [
+                    {
+                        "name": "ticker",
+                        "type": "STRING",
+                        "description": "Enter the stock symbol for the company",
+                        "default": "IBM"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "Ticker": "str",
+                    "Full Name": "str",
+                    "Relationship": "str"
+                }
+            }
+        ],
+        "query": "I want to start an e-commerce business and need to find logistics companies. Can you give me a list of logistics companies and their information? Additionally, I would like to know the supply chain information for IBM.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Corporate Supply Chain",
+                "Supply Chain"
+            ]
+        ],
+        "query_id": 20124
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Corporate Supply Chain",
+                "api_name": "Supply Chain",
+                "api_description": "Get supply chain information.",
+                "required_parameters": [
+                    {
+                        "name": "ticker",
+                        "type": "STRING",
+                        "description": "Enter the stock symbol for the company",
+                        "default": "IBM"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "Ticker": "str",
+                    "Full Name": "str",
+                    "Relationship": "str"
+                }
+            }
+        ],
+        "query": "I need to ship a package internationally and I'm looking for reliable logistics companies. Can you provide me with a list of logistics companies along with their images and additional data? Also, please provide the supply chain information for IBM.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Corporate Supply Chain",
+                "Supply Chain"
+            ]
+        ],
+        "query_id": 20125
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Corporate Supply Chain",
+                "api_name": "Supply Chain",
+                "api_description": "Get supply chain information.",
+                "required_parameters": [
+                    {
+                        "name": "ticker",
+                        "type": "STRING",
+                        "description": "Enter the stock symbol for the company",
+                        "default": "IBM"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "Ticker": "str",
+                    "Full Name": "str",
+                    "Relationship": "str"
+                }
+            }
+        ],
+        "query": "I'm planning a company event and need logistics services. Can you give me a list of logistics companies and their information? Additionally, I would like to know the supply chain information for IBM.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Corporate Supply Chain",
+                "Supply Chain"
+            ]
+        ],
+        "query_id": 20126
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Finance",
+                "tool_name": "Corporate Supply Chain",
+                "api_name": "Supply Chain",
+                "api_description": "Get supply chain information.",
+                "required_parameters": [
+                    {
+                        "name": "ticker",
+                        "type": "STRING",
+                        "description": "Enter the stock symbol for the company",
+                        "default": "IBM"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "Ticker": "str",
+                    "Full Name": "str",
+                    "Relationship": "str"
+                }
+            }
+        ],
+        "query": "I'm starting a new project and need logistics services. Can you give me a list of logistics companies and their information? Additionally, I would like to know the supply chain information for IBM.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Corporate Supply Chain",
+                "Supply Chain"
+            ]
+        ],
+        "query_id": 20128
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Commerce",
+                "tool_name": "AliExpress unofficial",
+                "api_name": "/categories",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "locale",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "country",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "error": "str"
+                }
+            },
+            {
+                "category_name": "Commerce",
+                "tool_name": "AliExpress unofficial",
+                "api_name": "/feedbacks/{id}",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "4000886597329"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "withPictures",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    },
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Commerce",
+                "tool_name": "AliExpress unofficial",
+                "api_name": "/categories/{id}",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "200000783"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "locale",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "country",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "error": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Commerce",
+                "tool_name": "Flance AliExpress",
+                "api_name": "product_id",
+                "api_description": "Get Aliexpress Data by Product Id",
+                "required_parameters": [
+                    {
+                        "name": "product_id",
+                        "type": "string",
+                        "description": "",
+                        "default": "32656173352"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Magic AliExpress",
+                "api_name": "/api/bestSales/SortedByNewest",
+                "api_description": "Retrieves the last best product added in the system",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "limit",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "10"
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Magic AliExpress",
+                "api_name": "/api/shipping/{productID}",
+                "api_description": "This ressource displays the shipping information for one product",
+                "required_parameters": [
+                    {
+                        "name": "productID",
+                        "type": "NUMBER",
+                        "description": "The Aliexpress product ID",
+                        "default": "4000961087745"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "toCountry",
+                        "type": "STRING",
+                        "description": "The country to calcul the freight ",
+                        "default": "FR"
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Magic AliExpress",
+                "api_name": "/api/v2/categories",
+                "api_description": "This resource represents a category in the system. We have 3 provider type <br> - API\n -WEBSITE\n -HYBRID\n <br> 1.API<br> This category is manager by the API, the ID indicated is the Alibaba ID and not Aliexpress ID.<br> 2. WESITE <br> This category is scraping of Aliexpress website <br> 3. HYBRID <br> This category has correspondence between Aliexpress and API; you have in the same object twice ID `alie_category_id` for Website and `api_category_id` for API<br> In the API to request by example product, in the category ID, you can indicate the both.  ",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            }
+        ],
+        "query": "I am organizing a charity event and need to find sponsors. Can you provide a list of companies that may be interested in sponsoring such events? Additionally, it would be helpful to know the contact information and background of each company. Thank you for your assistance.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "AliExpress unofficial",
+                "/feedbacks/{id}"
+            ]
+        ],
+        "query_id": 20258
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_product",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "product_url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "smart-watches/pp_009238562599.html"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_shipping",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "country_code",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "CO"
+                    },
+                    {
+                        "name": "product_url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "smart-watches/pp_009238562599.html"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "num",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/categories",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "main_category",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Car Electronics"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm planning a road trip to explore car electronics and I need some recommendations. Can you provide me with a list of car electronics categories available on Gearbest? Also, suggest some logistics companies from Kargom Nerede that can deliver the products to my location.",
+        "relevant APIs": [
+            [
+                "Gearbest",
+                "/categories"
+            ],
+            [
+                "Kargom Nerede",
+                "companies"
+            ]
+        ],
+        "query_id": 22104
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_product",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "product_url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "smart-watches/pp_009238562599.html"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_shipping",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "country_code",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "CO"
+                    },
+                    {
+                        "name": "product_url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "smart-watches/pp_009238562599.html"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "num",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/categories",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "main_category",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Car Electronics"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "My friend is planning to buy a smartwatch from Gearbest and he wants to know the shipping options to Colombia. Can you help him get the shipping details? Also, recommend some reliable logistics companies from Kargom Nerede for international shipping.",
+        "relevant APIs": [
+            [
+                "Gearbest",
+                "/get_shipping"
+            ],
+            [
+                "Kargom Nerede",
+                "companies"
+            ]
+        ],
+        "query_id": 22107
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_product",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "product_url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "smart-watches/pp_009238562599.html"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_shipping",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "country_code",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "CO"
+                    },
+                    {
+                        "name": "product_url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "smart-watches/pp_009238562599.html"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "num",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/categories",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "main_category",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Car Electronics"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm planning a trip to South America and I need to find a reliable logistics company to handle my shipments. Can you provide me with a list of logistics companies available on Kargom Nerede? Additionally, I would like to check the shipping options for a smartwatch from Gearbest to Colombia.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Gearbest",
+                "/get_shipping"
+            ]
+        ],
+        "query_id": 22109
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_product",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "product_url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "smart-watches/pp_009238562599.html"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/get_shipping",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "country_code",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "CO"
+                    },
+                    {
+                        "name": "product_url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "smart-watches/pp_009238562599.html"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "num",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": 1
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Gearbest",
+                "api_name": "/categories",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "main_category",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Car Electronics"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm interested in car electronics and I need some recommendations. Can you provide me with a list of car electronics categories available on Gearbest? Also, suggest some logistics companies from Kargom Nerede that can deliver the products to my location.",
+        "relevant APIs": [
+            [
+                "Gearbest",
+                "/categories"
+            ],
+            [
+                "Kargom Nerede",
+                "companies"
+            ]
+        ],
+        "query_id": 22110
+    }
+]

@@ -1,0 +1,1866 @@
+[
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transitaires",
+                "api_name": "Transitaire",
+                "api_description": "R\u00e9cup\u00e8re un transitaire donn\u00e9e",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "DOUANE_AGENCE_GONDRAND"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "str",
+                    "codePostal": "str",
+                    "email": "str",
+                    "name": "str",
+                    "phone": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transitaires",
+                "api_name": "Transitaires",
+                "api_description": "Renvoie tous les transiatires",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "str",
+                    "name": "str",
+                    "phone": "str"
+                }
+            }
+        ],
+        "query": "Help me find the contact details of the customs agency 'Gondrand' in New Caledonia. I specifically require their postal code, email, name, and phone number. Additionally, I would like to obtain a comprehensive list of all available transitaires.",
+        "relevant APIs": [
+            [
+                "Transitaires",
+                "Transitaires"
+            ],
+            [
+                "Transitaires",
+                "Transitaires"
+            ]
+        ],
+        "query_id": 18
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Count",
+                "api_description": "Compte le nombre d'\u00e9tapes de l'historique, pratique pour limiter la consommation r\u00e9seau ou les ressources sur un IoT. Permet par exemple de poller un \u00e9tat de mani\u00e8re optimale.",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "nbSteps": "int"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "All",
+                "api_description": "Tout l'historique du colis depuis son envoi jusqu'au dernier \u00e9tat en cours.",
+                "required_parameters": [
+                    {
+                        "name": "colisid",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            }
+        ],
+        "query": "My friend is eagerly waiting for a package with the ID CA107308006SI. Can you please provide the latest status and localization details of the package? It would be great if you could also share the country and the type of event associated with it.",
+        "relevant APIs": [
+            [
+                "suivi-colis",
+                "Latest"
+            ],
+            [
+                "suivi-colis",
+                "All"
+            ]
+        ],
+        "query_id": 30
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Count",
+                "api_description": "Compte le nombre d'\u00e9tapes de l'historique, pratique pour limiter la consommation r\u00e9seau ou les ressources sur un IoT. Permet par exemple de poller un \u00e9tat de mani\u00e8re optimale.",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "nbSteps": "int"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "All",
+                "api_description": "Tout l'historique du colis depuis son envoi jusqu'au dernier \u00e9tat en cours.",
+                "required_parameters": [
+                    {
+                        "name": "colisid",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            }
+        ],
+        "query": "I want to know the latest update and localization details of my package with the ID CA107308006SI. Additionally, I would like to know the country and the type of event associated with the package.",
+        "relevant APIs": [
+            [
+                "suivi-colis",
+                "Latest"
+            ],
+            [
+                "suivi-colis",
+                "All"
+            ]
+        ],
+        "query_id": 32
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Data",
+                "tool_name": "Simple YouTube Search",
+                "api_name": "Search",
+                "api_description": "Make youtube search",
+                "required_parameters": [
+                    {
+                        "name": "query",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "never+gonna+give+you+up"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "type",
+                        "type": "ENUM",
+                        "description": "",
+                        "default": ""
+                    },
+                    {
+                        "name": "safesearch",
+                        "type": "BOOLEAN",
+                        "description": "",
+                        "default": "false"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "results": [
+                        {
+                            "uploadedAt": "str",
+                            "id": "str",
+                            "tags": {},
+                            "nsfw": "bool",
+                            "private": "bool",
+                            "description": "NoneType",
+                            "url": "str",
+                            "unlisted": "bool",
+                            "channel": {
+                                "name": "str",
+                                "icon": "str",
+                                "id": "str"
+                            },
+                            "thumbnail": {
+                                "url": "str",
+                                "height": "int",
+                                "id": "str",
+                                "width": "int"
+                            },
+                            "ratings": {
+                                "likes": "int",
+                                "dislikes": "int"
+                            },
+                            "shorts": "bool",
+                            "title": "str",
+                            "live": "bool",
+                            "duration_formatted": "str",
+                            "views": "int",
+                            "duration": "int",
+                            "shorts_url": "str",
+                            "type": "str",
+                            "_list_length": 19
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "Simple YouTube Search",
+                "api_name": "Playlist",
+                "api_description": "YouTube playlist data",
+                "required_parameters": [
+                    {
+                        "name": "list",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "PLillGF-RfqbZ2ybcoD2OaabW2P7Ws8CWu"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "result": {
+                        "link": "str",
+                        "thumbnail": {
+                            "url": "str",
+                            "height": "int",
+                            "id": "NoneType",
+                            "width": "int"
+                        },
+                        "id": "str",
+                        "videos": [
+                            {
+                                "uploadedAt": "NoneType",
+                                "id": "str",
+                                "tags": {},
+                                "nsfw": "bool",
+                                "private": "bool",
+                                "description": "NoneType",
+                                "url": "str",
+                                "unlisted": "bool",
+                                "channel": {
+                                    "name": "str",
+                                    "icon": "NoneType",
+                                    "id": "str"
+                                },
+                                "thumbnail": {
+                                    "url": "str",
+                                    "height": "int",
+                                    "id": "str",
+                                    "width": "int"
+                                },
+                                "ratings": {
+                                    "likes": "int",
+                                    "dislikes": "int"
+                                },
+                                "shorts": "bool",
+                                "title": "str",
+                                "live": "bool",
+                                "duration_formatted": "str",
+                                "views": "int",
+                                "duration": "int",
+                                "shorts_url": "str",
+                                "type": "str",
+                                "_list_length": 41
+                            }
+                        ],
+                        "video_count": "int",
+                        "title": "str",
+                        "views": "int",
+                        "last_update": "str",
+                        "url": "str",
+                        "channel": {
+                            "url": "str",
+                            "name": "str",
+                            "icon": "str",
+                            "id": "str"
+                        }
+                    }
+                }
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "Simple YouTube Search",
+                "api_name": "Video",
+                "api_description": "Get particular video",
+                "required_parameters": [
+                    {
+                        "name": "search",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "https://www.youtube.com/watch?v=fBNz5xF-Kx4"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "result": {
+                        "uploadedAt": "str",
+                        "id": "str",
+                        "tags": [
+                            "list of str with length 4"
+                        ],
+                        "nsfw": "bool",
+                        "private": "bool",
+                        "description": "str",
+                        "url": "str",
+                        "unlisted": "bool",
+                        "channel": {
+                            "name": "str",
+                            "icon": "str",
+                            "id": "str"
+                        },
+                        "thumbnail": {
+                            "url": "str",
+                            "height": "int",
+                            "id": "str",
+                            "width": "int"
+                        },
+                        "ratings": {
+                            "likes": "int",
+                            "dislikes": "int"
+                        },
+                        "shorts": "bool",
+                        "title": "str",
+                        "live": "bool",
+                        "duration_formatted": "str",
+                        "views": "int",
+                        "duration": "int",
+                        "shorts_url": "str",
+                        "type": "str"
+                    }
+                }
+            }
+        ],
+        "query": "I need to find a video tutorial on how to play the guitar. Please give me the details of the most viewed guitar tutorial video. Additionally, I would like to know the details of the channel that uploaded the video.",
+        "relevant APIs": [
+            [
+                "Simple YouTube Search",
+                "Search"
+            ],
+            [
+                "Simple YouTube Search",
+                "Video"
+            ]
+        ],
+        "query_id": 390
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Data",
+                "tool_name": "Keyword Analysis",
+                "api_name": "PopularSitesForQuery",
+                "api_description": "Get the **popular sites** for a given search query.",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "The user's search query string.",
+                        "default": "taylor swift"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "name": "str",
+                    "score": "float"
+                }
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "Keyword Analysis",
+                "api_name": "QueryKeywords",
+                "api_description": "Get the **main keywords** for a given search query.",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "The user's search query string.",
+                        "default": "cyberia game review"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "Keyword Analysis",
+                "api_name": "SimilarQueries",
+                "api_description": "Get **similar queries** for a given search query.",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "The user's search query string.",
+                        "default": "john wick 3"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "name": "str",
+                    "score": "float"
+                }
+            }
+        ],
+        "query": "I am writing a blog post about the latest fashion trends. Can you suggest popular sites and main keywords for the search query 'spring fashion'? I want to include relevant information and attract more readers.",
+        "relevant APIs": [
+            [
+                "Keyword Analysis",
+                "PopularSitesForQuery"
+            ],
+            [
+                "Keyword Analysis",
+                "QueryKeywords"
+            ]
+        ],
+        "query_id": 1075
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "find similar",
+                "api_description": "find similar movies for your movie",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "24168-titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "get Id",
+                "api_description": "get the id of your movie",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            }
+        ],
+        "query": "I love watching movies with my friends and we're always looking for recommendations. Can you find similar movies to 'Inception'? Also, provide the ID of the movie 'Inception' so that we can explore more about it.",
+        "relevant APIs": [
+            [
+                "Similar Movies",
+                "find similar"
+            ],
+            [
+                "Similar Movies",
+                "get Id"
+            ]
+        ],
+        "query_id": 1164
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "find similar",
+                "api_description": "find similar movies for your movie",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "24168-titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "get Id",
+                "api_description": "get the id of your movie",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            }
+        ],
+        "query": "I'm organizing a movie marathon and I need recommendations for movies similar to 'Fight Club'. Can you find me some similar movies? Additionally, please provide the ID of the movie 'Fight Club' so that I can gather more information about it.",
+        "relevant APIs": [
+            [
+                "Similar Movies",
+                "find similar"
+            ],
+            [
+                "Similar Movies",
+                "get Id"
+            ]
+        ],
+        "query_id": 1170
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Video_Images",
+                "tool_name": "List Movies",
+                "api_name": "With RT Ratings",
+                "api_description": "Returns the list with the Rotten Tomatoes rating included",
+                "required_parameters": [
+                    {
+                        "name": "with_rt_ratings",
+                        "type": "BOOLEAN",
+                        "description": "",
+                        "default": "false"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": "{\"status\": \"str\", \"status_message\": \"str\", \"data\": {\"movie_count\": \"int\", \"limit\": \"int\", \"page_number\": \"int\", \"movies\": [{\"id\": \"int\", \"url\": \"str\", \"imdb_code\": \"str\", \"title\": \"str\", \"title_english\": \"str\", \"title_long\": \"str\", \"slug\": \"str\", \"year\": \"int\", \"rating\": \"float\", \"runtime\": \"int\", \"genres\": [\"list of str with length 1\"], \"summary\": \"str\", \"description_full\": \"str\", \"synopsis\": \"str\", \"yt_trailer_code\": \"str\", \"language\": \"str\", \"mpa_rating\": \"str\", \"background_image\": \"str\", \"background_image_original\": \"str\", \"small_cover_image\": \"str\", \"medium_cover_image\": \"str\", \"large_cover_image\": \"str\", \"state\": \"str\", \"torrents\": [{\"url\": \"str\", \"hash\": \"str\", \"quality\": \"str\", \"type\": \"str\", \"seeds\": \"int\", \"peers\": \"int\", \"size\": \"str\", \"size_bytes\": \"int\", \"date_uploaded\": \"str\", \"date_uploaded_unix\": \"int\", \"_list_length\": 2}], \"date_uploaded\": \"str\", \"date_uploaded_unix\": \"int\", \"_list_length\": 20}]}, \"@meta\": {\"server_time\": \"int\", \"server_timezone\": \"str\", \"api_version\":"
+            },
+            {
+                "category_name": "Video_Images",
+                "tool_name": "List Movies",
+                "api_name": "Order By",
+                "api_description": "Orders the results by either Ascending or Descending order",
+                "required_parameters": [
+                    {
+                        "name": "order_by",
+                        "type": "string",
+                        "description": "",
+                        "default": "desc"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Video_Images",
+                "tool_name": "List Movies",
+                "api_name": "Sort By",
+                "api_description": "Sorts the results by choosen value",
+                "required_parameters": [
+                    {
+                        "name": "sort_by",
+                        "type": "string",
+                        "description": "",
+                        "default": "date_added"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Video_Images",
+                "tool_name": "List Movies",
+                "api_name": "Genre",
+                "api_description": "Used to filter by a given genre (See http://www.imdb.com/genre/ for full list)",
+                "required_parameters": [
+                    {
+                        "name": "genre",
+                        "type": "string",
+                        "description": "",
+                        "default": "all"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Video_Images",
+                "tool_name": "List Movies",
+                "api_name": "Query Term",
+                "api_description": "Used for movie search, matching on: Movie Title/IMDb Code, Actor Name/IMDb Code, Director Name/IMDb Code",
+                "required_parameters": [
+                    {
+                        "name": "query_term",
+                        "type": "string",
+                        "description": "",
+                        "default": "0"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": "{\"status\": \"str\", \"status_message\": \"str\", \"data\": {\"movie_count\": \"int\", \"limit\": \"int\", \"page_number\": \"int\", \"movies\": [{\"id\": \"int\", \"url\": \"str\", \"imdb_code\": \"str\", \"title\": \"str\", \"title_english\": \"str\", \"title_long\": \"str\", \"slug\": \"str\", \"year\": \"int\", \"rating\": \"float\", \"runtime\": \"int\", \"genres\": [\"list of str with length 1\"], \"summary\": \"str\", \"description_full\": \"str\", \"synopsis\": \"str\", \"yt_trailer_code\": \"str\", \"language\": \"str\", \"mpa_rating\": \"str\", \"background_image\": \"str\", \"background_image_original\": \"str\", \"small_cover_image\": \"str\", \"medium_cover_image\": \"str\", \"large_cover_image\": \"str\", \"state\": \"str\", \"torrents\": [{\"url\": \"str\", \"hash\": \"str\", \"quality\": \"str\", \"type\": \"str\", \"seeds\": \"int\", \"peers\": \"int\", \"size\": \"str\", \"size_bytes\": \"int\", \"date_uploaded\": \"str\", \"date_uploaded_unix\": \"int\", \"_list_length\": 2}], \"date_uploaded\": \"str\", \"date_uploaded_unix\": \"int\", \"_list_length\": 20}]}, \"@meta\": {\"server_time\": \"int\", \"server_timezone\": \"str\", \"api_version\":"
+            },
+            {
+                "category_name": "Video_Images",
+                "tool_name": "List Movies",
+                "api_name": "Minimum Rating",
+                "api_description": "Used to filter movie by a given minimum IMDb rating",
+                "required_parameters": [
+                    {
+                        "name": "minimum_rating",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "0"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": "{\"status\": \"str\", \"status_message\": \"str\", \"data\": {\"movie_count\": \"int\", \"limit\": \"int\", \"page_number\": \"int\", \"movies\": [{\"id\": \"int\", \"url\": \"str\", \"imdb_code\": \"str\", \"title\": \"str\", \"title_english\": \"str\", \"title_long\": \"str\", \"slug\": \"str\", \"year\": \"int\", \"rating\": \"float\", \"runtime\": \"int\", \"genres\": [\"list of str with length 1\"], \"summary\": \"str\", \"description_full\": \"str\", \"synopsis\": \"str\", \"yt_trailer_code\": \"str\", \"language\": \"str\", \"mpa_rating\": \"str\", \"background_image\": \"str\", \"background_image_original\": \"str\", \"small_cover_image\": \"str\", \"medium_cover_image\": \"str\", \"large_cover_image\": \"str\", \"state\": \"str\", \"torrents\": [{\"url\": \"str\", \"hash\": \"str\", \"quality\": \"str\", \"type\": \"str\", \"seeds\": \"int\", \"peers\": \"int\", \"size\": \"str\", \"size_bytes\": \"int\", \"date_uploaded\": \"str\", \"date_uploaded_unix\": \"int\", \"_list_length\": 2}], \"date_uploaded\": \"str\", \"date_uploaded_unix\": \"int\", \"_list_length\": 20}]}, \"@meta\": {\"server_time\": \"int\", \"server_timezone\": \"str\", \"api_version\":"
+            },
+            {
+                "category_name": "Video_Images",
+                "tool_name": "List Movies",
+                "api_name": "Quality",
+                "api_description": "Used to filter by a given quality",
+                "required_parameters": [
+                    {
+                        "name": "quality",
+                        "type": "string",
+                        "description": "",
+                        "default": "all"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Video_Images",
+                "tool_name": "List Movies",
+                "api_name": "Page",
+                "api_description": "Used to see the next page of movies, eg limit=15 and page=2 will show you movies 15-30",
+                "required_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "1"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Video_Images",
+                "tool_name": "List Movies",
+                "api_name": "Limit",
+                "api_description": "The limit of results per page that has been set",
+                "required_parameters": [
+                    {
+                        "name": "limit",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "20"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Video_Images",
+                "tool_name": "List Movies",
+                "api_name": "List Movies",
+                "api_description": "Used to list and search through out all the available movies. Can sort, filter, search and order the results",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm interested in the latest movie releases. Could you provide me with a list of movies sorted by their release dates? Please include the movie title, release year, IMDb rating, and cover image for each movie.",
+        "relevant APIs": [
+            [
+                "List Movies",
+                "Sort By"
+            ],
+            [
+                "List Movies",
+                "List Movies"
+            ]
+        ],
+        "query_id": 1298
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Media",
+                "tool_name": "public-url-share",
+                "api_name": "Media sources statistics",
+                "api_description": "Search and find details or statistics on media sources",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "apiKey",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "b7ed776c-7f0f-4dd2-ba9d-9c6a6e1f44cb"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "int",
+                    "message": "str",
+                    "timestamp": "int"
+                }
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "public-url-share",
+                "api_name": "Top 50 startups news from the last month",
+                "api_description": "Top 50 startups news from the last month",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "from",
+                        "type": "DATE (YYYY-MM-DD)",
+                        "description": "",
+                        "default": "2022-12-19"
+                    },
+                    {
+                        "name": "sourceGroup",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "top100"
+                    },
+                    {
+                        "name": "apiKey",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "b7ed776c-7f0f-4dd2-ba9d-9c6a6e1f44cb"
+                    },
+                    {
+                        "name": "language",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "en"
+                    },
+                    {
+                        "name": "topic",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Startups"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "int",
+                    "message": "str",
+                    "timestamp": "int"
+                }
+            }
+        ],
+        "query": "My friend is conducting research on media sources and needs some statistics. Can you help by providing details and statistics on various media sources? It would be really helpful if you could also fetch the top 50 startup news articles from the last month. Thank you so much!",
+        "relevant APIs": [
+            [
+                "public-url-share",
+                "Media sources statistics"
+            ],
+            [
+                "public-url-share",
+                "Top 50 startups news from the last month"
+            ]
+        ],
+        "query_id": 1570
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Mapping",
+                "tool_name": "Dargan",
+                "api_name": "Distance",
+                "api_description": "Gets the distance between 2 postcodes in KM",
+                "required_parameters": [
+                    {
+                        "name": "postcodeA",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "CF103NP"
+                    },
+                    {
+                        "name": "postcodeB",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "CF103RB"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "A": {
+                        "postcode": "str",
+                        "latitude": "float",
+                        "longitude": "float"
+                    },
+                    "B": {
+                        "postcode": "str",
+                        "latitude": "float",
+                        "longitude": "float"
+                    },
+                    "Distance": "float"
+                }
+            },
+            {
+                "category_name": "Mapping",
+                "tool_name": "Dargan",
+                "api_name": "Geocode",
+                "api_description": "Returns the latitude and longitude for a given postcode",
+                "required_parameters": [
+                    {
+                        "name": "postcode",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "CF103NP"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "postcode": "str",
+                    "latitude": "float",
+                    "longitude": "float"
+                }
+            },
+            {
+                "category_name": "Mapping",
+                "tool_name": "Dargan",
+                "api_name": "In Radius",
+                "api_description": "Find all postcodes within a certain radius (in KM) of a postcode",
+                "required_parameters": [
+                    {
+                        "name": "postcode",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "CF103NP"
+                    },
+                    {
+                        "name": "radius",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "0.1"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "Distance": "float",
+                    "Postcode": "str"
+                }
+            }
+        ],
+        "query": "I am planning a family vacation to the beautiful city of Edinburgh (postcode EH1 1BB). I would like to know all the postcodes within a 30 km radius of Edinburgh. Can you provide me with this information? Additionally, I need the latitude and longitude coordinates for the Edinburgh postcode.",
+        "relevant APIs": [
+            [
+                "Dargan",
+                "In Radius"
+            ],
+            [
+                "Dargan",
+                "Geocode"
+            ]
+        ],
+        "query_id": 2510
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Tools",
+                "tool_name": "URL Content Extractor",
+                "api_name": "Search Content",
+                "api_description": "Allows you to search content for content based on a query.",
+                "required_parameters": [
+                    {
+                        "name": "query",
+                        "type": "STRING",
+                        "description": "",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Tools",
+                "tool_name": "URL Content Extractor",
+                "api_name": "Get Trending",
+                "api_description": "This will return a list of news articles that are trending.",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Tools",
+                "tool_name": "URL Content Extractor",
+                "api_name": "Get Content",
+                "api_description": "Give a url and it will spit back the content of that url",
+                "required_parameters": [
+                    {
+                        "name": "url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "https://www.cnbc.com/2022/06/27/three-arrows-capital-crypto-hedge-fund-defaults-on-voyager-loan.html"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            }
+        ],
+        "query": "I'm interested in reading the content of a specific URL. Can you provide me with the content of the URL 'https://www.example.com' using the 'Get Content' API? Also, I would like to know the trending news articles using the 'Get Trending' API.",
+        "relevant APIs": [
+            [
+                "URL Content Extractor",
+                "Get Content"
+            ],
+            [
+                "URL Content Extractor",
+                "Get Trending"
+            ]
+        ],
+        "query_id": 4262
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Count",
+                "api_description": "Compte le nombre d'\u00e9tapes de l'historique, pratique pour limiter la consommation r\u00e9seau ou les ressources sur un IoT. Permet par exemple de poller un \u00e9tat de mani\u00e8re optimale.",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "nbSteps": "int"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "All",
+                "api_description": "Tout l'historique du colis depuis son envoi jusqu'au dernier \u00e9tat en cours.",
+                "required_parameters": [
+                    {
+                        "name": "colisid",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            }
+        ],
+        "query": "I'm curious about the health of the package tracking API. Please provide me with the current status. Also, I need the complete history of a package with the tracking ID 'CA107308006SI'. ",
+        "relevant APIs": [
+            [
+                "suivi-colis",
+                "Health"
+            ],
+            [
+                "suivi-colis",
+                "All"
+            ]
+        ],
+        "query_id": 8331
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Count",
+                "api_description": "Compte le nombre d'\u00e9tapes de l'historique, pratique pour limiter la consommation r\u00e9seau ou les ressources sur un IoT. Permet par exemple de poller un \u00e9tat de mani\u00e8re optimale.",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "nbSteps": "int"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "All",
+                "api_description": "Tout l'historique du colis depuis son envoi jusqu'au dernier \u00e9tat en cours.",
+                "required_parameters": [
+                    {
+                        "name": "colisid",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            }
+        ],
+        "query": "I'm experiencing issues with the package tracking API. Please check the health of the API. Additionally, I need the complete history of a package with the tracking ID 'CA107308006SI'. ",
+        "relevant APIs": [
+            [
+                "suivi-colis",
+                "Health"
+            ],
+            [
+                "suivi-colis",
+                "All"
+            ]
+        ],
+        "query_id": 8336
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "find similar",
+                "api_description": "find similar movies for your movie",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "24168-titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "get Id",
+                "api_description": "get the id of your movie",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            }
+        ],
+        "query": "I need assistance in finding movies that are similar to 'Titanic'. Can you suggest some movies with a similar theme or setting? It would be great if you could provide a list of movies along with their release dates and directors.",
+        "relevant APIs": [
+            [
+                "Similar Movies",
+                "find similar"
+            ],
+            [
+                "Similar Movies",
+                "get Id"
+            ]
+        ],
+        "query_id": 9576
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "find similar",
+                "api_description": "find similar movies for your movie",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "24168-titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "get Id",
+                "api_description": "get the id of your movie",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            }
+        ],
+        "query": "I'm a filmmaker and I'm looking for inspiration for my next project. Can you help me find movies that are similar to 'Titanic'? It would be helpful if you could provide a list of movies along with their directors and production companies.",
+        "relevant APIs": [
+            [
+                "Similar Movies",
+                "find similar"
+            ],
+            [
+                "Similar Movies",
+                "get Id"
+            ]
+        ],
+        "query_id": 9580
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "find similar",
+                "api_description": "find similar movies for your movie",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "24168-titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "get Id",
+                "api_description": "get the id of your movie",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            }
+        ],
+        "query": "I'm a movie blogger and I'm looking for movies that are similar to 'Titanic' to recommend to my readers. Can you suggest some movies with a similar storyline and character development? It would be great if you could provide a list of movies along with their IMDb ratings and user reviews.",
+        "relevant APIs": [
+            [
+                "Similar Movies",
+                "find similar"
+            ],
+            [
+                "Similar Movies",
+                "get Id"
+            ]
+        ],
+        "query_id": 9583
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Media",
+                "tool_name": "public-url-share",
+                "api_name": "Media sources statistics",
+                "api_description": "Search and find details or statistics on media sources",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "apiKey",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "b7ed776c-7f0f-4dd2-ba9d-9c6a6e1f44cb"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "int",
+                    "message": "str",
+                    "timestamp": "int"
+                }
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "public-url-share",
+                "api_name": "Top 50 startups news from the last month",
+                "api_description": "Top 50 startups news from the last month",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "from",
+                        "type": "DATE (YYYY-MM-DD)",
+                        "description": "",
+                        "default": "2022-12-19"
+                    },
+                    {
+                        "name": "sourceGroup",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "top100"
+                    },
+                    {
+                        "name": "apiKey",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "b7ed776c-7f0f-4dd2-ba9d-9c6a6e1f44cb"
+                    },
+                    {
+                        "name": "language",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "en"
+                    },
+                    {
+                        "name": "topic",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Startups"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "int",
+                    "message": "str",
+                    "timestamp": "int"
+                }
+            }
+        ],
+        "query": "I'm planning to write an article about the startup ecosystem. Can you give me the top 50 startup news articles from the last month? It would be great if you could provide the article titles, publication dates, and sources. Also, I need detailed statistics on media sources, including the number of articles and average article length.",
+        "relevant APIs": [
+            [
+                "public-url-share",
+                "Top 50 startups news from the last month"
+            ],
+            [
+                "public-url-share",
+                "Media sources statistics"
+            ]
+        ],
+        "query_id": 10022
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Media",
+                "tool_name": "public-url-share",
+                "api_name": "Media sources statistics",
+                "api_description": "Search and find details or statistics on media sources",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "apiKey",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "b7ed776c-7f0f-4dd2-ba9d-9c6a6e1f44cb"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "int",
+                    "message": "str",
+                    "timestamp": "int"
+                }
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "public-url-share",
+                "api_name": "Top 50 startups news from the last month",
+                "api_description": "Top 50 startups news from the last month",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "from",
+                        "type": "DATE (YYYY-MM-DD)",
+                        "description": "",
+                        "default": "2022-12-19"
+                    },
+                    {
+                        "name": "sourceGroup",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "top100"
+                    },
+                    {
+                        "name": "apiKey",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "b7ed776c-7f0f-4dd2-ba9d-9c6a6e1f44cb"
+                    },
+                    {
+                        "name": "language",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "en"
+                    },
+                    {
+                        "name": "topic",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Startups"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "int",
+                    "message": "str",
+                    "timestamp": "int"
+                }
+            }
+        ],
+        "query": "As an entrepreneur, I'm interested in the startup ecosystem. Can you provide me with the top 50 startup news articles from the last month? It would be great if you could provide the article titles, publication dates, and sources. Also, I need detailed statistics on media sources, including the number of articles and average article length.",
+        "relevant APIs": [
+            [
+                "public-url-share",
+                "Top 50 startups news from the last month"
+            ],
+            [
+                "public-url-share",
+                "Media sources statistics"
+            ]
+        ],
+        "query_id": 10026
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Media",
+                "tool_name": "public-url-share",
+                "api_name": "Media sources statistics",
+                "api_description": "Search and find details or statistics on media sources",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "apiKey",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "b7ed776c-7f0f-4dd2-ba9d-9c6a6e1f44cb"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "int",
+                    "message": "str",
+                    "timestamp": "int"
+                }
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "public-url-share",
+                "api_name": "Top 50 startups news from the last month",
+                "api_description": "Top 50 startups news from the last month",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "from",
+                        "type": "DATE (YYYY-MM-DD)",
+                        "description": "",
+                        "default": "2022-12-19"
+                    },
+                    {
+                        "name": "sourceGroup",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "top100"
+                    },
+                    {
+                        "name": "apiKey",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "b7ed776c-7f0f-4dd2-ba9d-9c6a6e1f44cb"
+                    },
+                    {
+                        "name": "language",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "en"
+                    },
+                    {
+                        "name": "topic",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Startups"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "int",
+                    "message": "str",
+                    "timestamp": "int"
+                }
+            }
+        ],
+        "query": "My friend is researching startups and needs the latest news. Can you give me the top 50 startup news articles from the last month? It would be helpful if you could provide the article titles, publication dates, and sources. Additionally, I would like to know the statistics on media sources, such as the number of articles and average article length.",
+        "relevant APIs": [
+            [
+                "public-url-share",
+                "Top 50 startups news from the last month"
+            ],
+            [
+                "public-url-share",
+                "Media sources statistics"
+            ]
+        ],
+        "query_id": 10027
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Media",
+                "tool_name": "public-url-share",
+                "api_name": "Media sources statistics",
+                "api_description": "Search and find details or statistics on media sources",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "apiKey",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "b7ed776c-7f0f-4dd2-ba9d-9c6a6e1f44cb"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "int",
+                    "message": "str",
+                    "timestamp": "int"
+                }
+            },
+            {
+                "category_name": "Media",
+                "tool_name": "public-url-share",
+                "api_name": "Top 50 startups news from the last month",
+                "api_description": "Top 50 startups news from the last month",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "from",
+                        "type": "DATE (YYYY-MM-DD)",
+                        "description": "",
+                        "default": "2022-12-19"
+                    },
+                    {
+                        "name": "sourceGroup",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "top100"
+                    },
+                    {
+                        "name": "apiKey",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "b7ed776c-7f0f-4dd2-ba9d-9c6a6e1f44cb"
+                    },
+                    {
+                        "name": "language",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "en"
+                    },
+                    {
+                        "name": "topic",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Startups"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "status": "int",
+                    "message": "str",
+                    "timestamp": "int"
+                }
+            }
+        ],
+        "query": "I'm starting a new company and want to stay updated on the startup ecosystem. Can you provide me with the top 50 startup news articles from the last month? It would be great if you could provide the article titles, publication dates, and sources. Also, I need detailed statistics on media sources, including the number of articles and average article length.",
+        "relevant APIs": [
+            [
+                "public-url-share",
+                "Top 50 startups news from the last month"
+            ],
+            [
+                "public-url-share",
+                "Media sources statistics"
+            ]
+        ],
+        "query_id": 10028
+    }
+]

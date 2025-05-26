@@ -1,0 +1,58 @@
+completions_kwargs:
+  model: "gpt-3.5-turbo-16k"
+  max_tokens: 1000
+  temperature: 0.2
+  timeout: 10
+  functions:
+    - name: "generate_feedback"
+      description: "Given a query and its answer, generate the feedback for the answer."
+      parameters:
+        type: "object"
+        properties:
+          feedback:
+            type: "string"
+        required: ["feedback"]
+    - name: "generate_comment"
+      description: "Given the feedback, conversational history, the task description and the descriptions for each tool, explain how to improve the text one by one."
+      parameters:
+        type: "object"
+        properties:
+          comment_for_task_description:
+            type: "string"
+          comment_for_tool_descriptions:
+            type: "string"
+        required: ["comment_for_task_description", "comment_for_tool_descriptions"]
+    - name: "generate_feedback_comment"
+      description: "Given the conversational history, the task description and the descriptions for each tool, explain how to improve the text one by one."
+      parameters:
+        type: "object"
+        properties:
+          comment_for_task_description:
+            type: "string"
+          comment_for_tool_descriptions:
+            type: "string"
+        required: ["comment_for_task_description", "comment_for_tool_descriptions"]
+    - name: "optimize_text"
+      description: "Given the text and its associated improvement comment, optimize the text. Note that the optimized text should be in English."
+      parameters:
+        type: "object"
+        properties:
+          optimized_context:
+            type: "string"
+        required: ["optimized_text"]
+    - name: "optimize_text_from_feedback"
+      description: "Given the text and the feedback, optimize the text. Note that the optimized text should be in English."
+      parameters:
+        type: "object"
+        properties:
+          optimized_context:
+            type: "string"
+        required: ["optimized_text"]
+    - name: "generate_reflective_feedback"
+      description: "Given a batch of feedback, generate a reflective feedback. Note that the optimized text should be in English."
+      parameters:
+        type: "object"
+        properties:
+          reflective_feedback:
+            type: "string"
+        required: ["reflective_feedback"]

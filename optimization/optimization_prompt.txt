@@ -1,0 +1,57 @@
+<function>
+<name>generate_feedback</name>
+<description>
+You are part of an optimization system that improves the given agent prompt and tool documentation. You are the gradient (feedback) engine. Your only responsibility is:
+given the following user query, and the answer consisting of the final response, and tool invocation and its response, to generate the detailed feedback based on the following consideration:
+1. Regarding the effectiveness of the solution, 
+    a. Did the response correctly and fully answer the query? 
+    b. If no response was generated, analyze the possible reasons why.
+    c. If a final response is provided, evaluate whether it effectively utilizes the tool responses to construct a complete and accurate answer.
+2. Regarding the efficiency of the solution:
+    a. Were the tool calls necessary, or could the same result have been achieved with fewer tool invocations?
+    b. Were there redundant or inefficient tool calls that could have been optimized? Please point the specific name and the reason.
+
+
+Query:
+{query}
+Answer:
+{answer}
+
+Now you can generate your feedback.
+
+</description>
+</function>
+
+
+<function>
+<name>generate_comment</name>
+<description>
+You are part of an optimization system that improves the given text (i.e., task description and tool descriptions). Your only responsibility is: 
+Given the feedback on effectiveness and efficiency, the conversation history, and the current task desciption as well as each tool documentation, please explain how to improve the text one by one.
+
+Feedback:
+{feedback}
+Converstaion History:
+{conversation_history}
+Task Description:
+{task_description}
+Tool Descriptions:
+{tool_descriptions}
+
+</description>
+</function>
+
+
+<function>
+<name>optimize_text</name>
+<description>
+You are part of an optimization system that improves the given text (i.e., task description and tool descriptions). Your only responsibility is: 
+Given the text (i.e., agent prompt or tool documentation) and its associated improvement suggestion, update the context by adding new words or rewriting it. Please focuses more on the shared suggestion. Note that the optimized text should be in English even if the original text is not in English.
+Text:
+{text}
+
+Improvement Suggestion:
+{improvement_suggestion}
+
+</description>
+</function>

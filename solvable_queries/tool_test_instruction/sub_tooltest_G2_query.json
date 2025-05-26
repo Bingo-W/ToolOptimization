@@ -1,0 +1,3318 @@
+[
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Create Container Tracking",
+                "api_name": "Get Tracking Data",
+                "api_description": "The user will be able to retrieve the data using this endpoint.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "6045e2f44e1b233199a5e77a"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Pack & Send",
+                "api_name": "/api/Tracking/",
+                "api_description": "If you support your Pack & Send Reference Number, we can provide your with some relevant information.",
+                "required_parameters": [
+                    {
+                        "name": "reference",
+                        "type": "string",
+                        "description": "",
+                        "default": "ReferenceNumberHere"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "type": "str",
+                    "title": "str",
+                    "status": "int",
+                    "traceId": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Pridnestrovie Post",
+                "api_name": "Get track info",
+                "api_description": "Get track info by track number",
+                "required_parameters": [
+                    {
+                        "name": "track_number",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "RB413450335SG"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Turkey Postal Codes",
+                "api_name": "il",
+                "api_description": "Turkish plates. 1 to 81",
+                "required_parameters": [
+                    {
+                        "name": "il",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "34"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "success": "bool",
+                    "status": "str",
+                    "dataupdatedate": "str",
+                    "description": "str",
+                    "pagecreatedate": "str",
+                    "postakodu": [
+                        {
+                            "plaka": "int",
+                            "il": "str",
+                            "ilce": "str",
+                            "semt_bucak_belde": "str",
+                            "mahalle": "str",
+                            "pk": "str",
+                            "_list_length": 975
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transitaires",
+                "api_name": "Transitaires",
+                "api_description": "Renvoie tous les transiatires",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "str",
+                    "name": "str",
+                    "phone": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transitaires",
+                "api_name": "Transitaire",
+                "api_description": "R\u00e9cup\u00e8re un transitaire donn\u00e9e",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "DOUANE_AGENCE_GONDRAND"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "str",
+                    "codePostal": "str",
+                    "email": "str",
+                    "name": "str",
+                    "phone": "str"
+                }
+            }
+        ],
+        "query": "I am planning a surprise party for my sister's birthday and I need to track the delivery of her gift. Can you provide me with the current status and details of the shipment with ID 6045e2f44e1b233199a5e77a? Additionally, I would like to know if there are any errors or error messages associated with the shipment.",
+        "relevant APIs": [
+            [
+                "Create Container Tracking",
+                "Get Tracking Data"
+            ],
+            [
+                "Pack & Send",
+                "/api/Tracking/"
+            ]
+        ],
+        "query_id": 27
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Orderful",
+                "api_name": "Transactions",
+                "api_description": "Get Transaction by ID",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "Orderful Transaction ID",
+                        "default": "8209520"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "ref": "str",
+                    "type": "str",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Pack & Send",
+                "api_name": "/api/Tracking/",
+                "api_description": "If you support your Pack & Send Reference Number, we can provide your with some relevant information.",
+                "required_parameters": [
+                    {
+                        "name": "reference",
+                        "type": "string",
+                        "description": "",
+                        "default": "ReferenceNumberHere"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "type": "str",
+                    "title": "str",
+                    "status": "int",
+                    "traceId": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "All",
+                "api_description": "Tout l'historique du colis depuis son envoi jusqu'au dernier \u00e9tat en cours.",
+                "required_parameters": [
+                    {
+                        "name": "colisid",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            }
+        ],
+        "query": "I'm planning a surprise gift for my friends and I would like to track a package using the Pack & Send reference number 'ReferenceNumberHere'. Could you provide me with the relevant information? Additionally, I'm interested in the latest status of the package with colis ID 'CA107308006SI'.",
+        "relevant APIs": [
+            [
+                "Pack & Send",
+                "/api/Tracking/"
+            ],
+            [
+                "suivi-colis",
+                "Latest"
+            ]
+        ],
+        "query_id": 44
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "CEP Brazil",
+                "api_name": "Retorna Dados do Endere\u00e7o atrav\u00e9s do CEP",
+                "api_description": "Retorna dados endere\u00e7o",
+                "required_parameters": [
+                    {
+                        "name": "cepNumber",
+                        "type": "string",
+                        "description": "",
+                        "default": "75094080"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "bairro": "str",
+                    "cep": "str",
+                    "cidade": "str",
+                    "complemento2": "str",
+                    "end": "str",
+                    "uf": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Count",
+                "api_description": "Compte le nombre d'\u00e9tapes de l'historique, pratique pour limiter la consommation r\u00e9seau ou les ressources sur un IoT. Permet par exemple de poller un \u00e9tat de mani\u00e8re optimale.",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "nbSteps": "int"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transitaires",
+                "api_name": "Transitaires",
+                "api_description": "Renvoie tous les transiatires",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "str",
+                    "name": "str",
+                    "phone": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transitaires",
+                "api_name": "Transitaire",
+                "api_description": "R\u00e9cup\u00e8re un transitaire donn\u00e9e",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "DOUANE_AGENCE_GONDRAND"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "str",
+                    "codePostal": "str",
+                    "email": "str",
+                    "name": "str",
+                    "phone": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transportistas de Argentina",
+                "api_name": "/tracking/correo_argentino/result_task/:task_id",
+                "api_description": "Result for one Task ID.",
+                "required_parameters": [
+                    {
+                        "name": "task_id",
+                        "type": "STRING",
+                        "description": "Task ID",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "statusCode": "int",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transportistas de Argentina",
+                "api_name": "/cities/search/:stateIsoCode/:keyword",
+                "api_description": "Search city for iso state and keyword name.",
+                "required_parameters": [
+                    {
+                        "name": "stateIsoCode",
+                        "type": "STRING",
+                        "description": "State ISO Code",
+                        "default": ""
+                    },
+                    {
+                        "name": "keyword",
+                        "type": "STRING",
+                        "description": "Keyword to search, example: Caballito",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "statusCode": "int",
+                    "message": "str",
+                    "error": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transportistas de Argentina",
+                "api_name": "/quotes/postcode/correo_argentino/:weight/:postCodeSrc/:postCodeDst",
+                "api_description": "List of quote for postcode in Correo Argentino.",
+                "required_parameters": [
+                    {
+                        "name": "postCodeDst",
+                        "type": "NUMBER",
+                        "description": "Postcode Destination",
+                        "default": ""
+                    },
+                    {
+                        "name": "postCodeSrc",
+                        "type": "NUMBER",
+                        "description": "Postcode Source",
+                        "default": ""
+                    },
+                    {
+                        "name": "weight",
+                        "type": "NUMBER",
+                        "description": "Weight in KG",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "statusCode": "int",
+                    "message": "str",
+                    "error": "str"
+                }
+            }
+        ],
+        "query": "My company is organizing a conference in Argentina and we need to ship some packages. Can you give me a quote for shipping a package from Buenos Aires to Cordoba? Also, provide me with the contact details of the transitaires available in Argentina.",
+        "relevant APIs": [
+            [
+                "Transitaires",
+                "Transitaires"
+            ],
+            [
+                "Transitaires",
+                "Transitaire"
+            ],
+            [
+                "Transportistas de Argentina",
+                "/quotes/postcode/correo_argentino/:weight/:postCodeSrc/:postCodeDst"
+            ],
+            [
+                "Transportistas de Argentina",
+                "/cities/search/:stateIsoCode/:keyword"
+            ],
+            [
+                "Transportistas de Argentina",
+                "/tracking/correo_argentino/result_task/:task_id"
+            ]
+        ],
+        "query_id": 56
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transportistas de Argentina",
+                "api_name": "/cities/states",
+                "api_description": "List of states for Argentina with iso code.",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "name": "str",
+                    "iso_code": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transportistas de Argentina",
+                "api_name": "/tracking/correo_argentino/result_task/:task_id",
+                "api_description": "Result for one Task ID.",
+                "required_parameters": [
+                    {
+                        "name": "task_id",
+                        "type": "STRING",
+                        "description": "Task ID",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "statusCode": "int",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Transportistas de Argentina",
+                "api_name": "/offices/search/:service/:stateIsoCode/:keyword",
+                "api_description": "List of offices for iso state and postcode.",
+                "required_parameters": [
+                    {
+                        "name": "keyword",
+                        "type": "STRING",
+                        "description": "Keyword to search, example: Caballito",
+                        "default": ""
+                    },
+                    {
+                        "name": "service",
+                        "type": "STRING",
+                        "description": "Service Name: correo_argentino, oca, andreani",
+                        "default": ""
+                    },
+                    {
+                        "name": "stateIsoCode",
+                        "type": "STRING",
+                        "description": "State ISO Code",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "All",
+                "api_description": "Tout l'historique du colis depuis son envoi jusqu'au dernier \u00e9tat en cours.",
+                "required_parameters": [
+                    {
+                        "name": "colisid",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "SQUAKE",
+                "api_name": "Projects",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "SQUAKE",
+                "api_name": "Checkhealth",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Orderful",
+                "api_name": "Transactions",
+                "api_description": "Get Transaction by ID",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "Orderful Transaction ID",
+                        "default": "8209520"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "ref": "str",
+                    "type": "str",
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I need the latest update on my package. Can you fetch the latest tracking status of my package with Task ID 'YZA567'? Also, provide me with the current status of my package. Additionally, check if there are any ongoing projects related to package tracking.",
+        "relevant APIs": [
+            [
+                "Transportistas de Argentina",
+                "/tracking/correo_argentino/result_task/:task_id"
+            ],
+            [
+                "suivi-colis",
+                "Latest"
+            ],
+            [
+                "SQUAKE",
+                "Projects"
+            ]
+        ],
+        "query_id": 67
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Create Container Tracking",
+                "api_name": "Get Tracking Data",
+                "api_description": "The user will be able to retrieve the data using this endpoint.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "6045e2f44e1b233199a5e77a"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Pack & Send",
+                "api_name": "/api/Tracking/",
+                "api_description": "If you support your Pack & Send Reference Number, we can provide your with some relevant information.",
+                "required_parameters": [
+                    {
+                        "name": "reference",
+                        "type": "string",
+                        "description": "",
+                        "default": "ReferenceNumberHere"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "type": "str",
+                    "title": "str",
+                    "status": "int",
+                    "traceId": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "All",
+                "api_description": "Tout l'historique du colis depuis son envoi jusqu'au dernier \u00e9tat en cours.",
+                "required_parameters": [
+                    {
+                        "name": "colisid",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Turkey Postal Codes",
+                "api_name": "il",
+                "api_description": "Turkish plates. 1 to 81",
+                "required_parameters": [
+                    {
+                        "name": "il",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "34"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "success": "bool",
+                    "status": "str",
+                    "dataupdatedate": "str",
+                    "description": "str",
+                    "pagecreatedate": "str",
+                    "postakodu": [
+                        {
+                            "plaka": "int",
+                            "il": "str",
+                            "ilce": "str",
+                            "semt_bucak_belde": "str",
+                            "mahalle": "str",
+                            "pk": "str",
+                            "_list_length": 975
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "GS1Parser",
+                "api_name": "/parse",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "Machine- or human-readable GS1 barcode data.",
+                        "default": "(01)12345678901231(10)ABCD-123(30)27(11)211015"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "parser": {
+                        "request": {
+                            "data": "str",
+                            "service-level": "int",
+                            "invocation-id": "str",
+                            "source": "str",
+                            "genspec-compliance": "str",
+                            "doc-version": "str"
+                        },
+                        "response": {
+                            "state": "bool",
+                            "application-identifiers": [
+                                {
+                                    "AI01": {
+                                        "identifier": "str",
+                                        "datacontent": "str",
+                                        "hri": "str",
+                                        "mri": "str",
+                                        "rendered-content": {
+                                            "description": "str",
+                                            "issuing country": "str"
+                                        },
+                                        "description": "str",
+                                        "datatitle": "str",
+                                        "state": "bool",
+                                        "aiformat": {
+                                            "identifierlength": "int",
+                                            "mindatalength": "int",
+                                            "maxdatalength": "int",
+                                            "allowalphanumeric": "bool",
+                                            "terminatorrequired": "bool",
+                                            "gs1formatstring": "str",
+                                            "datatype": "str",
+                                            "unit": "str"
+                                        },
+                                        "messages": "empty list"
+                                    },
+                                    "_list_length": 4
+                                }
+                            ],
+                            "messages": "empty list"
+                        }
+                    }
+                }
+            }
+        ],
+        "query": "Help me keep track of the package I ordered online with the tracking ID 6045e2f44e1b233199a5e77a. Provide me with the latest updates on its delivery status. Furthermore, fetch the details associated with the Pack & Send reference number 'ReferenceNumberHere'. Lastly, check the health of the suivi-colis API.",
+        "relevant APIs": [
+            [
+                "Create Container Tracking",
+                "Get Tracking Data"
+            ],
+            [
+                "Pack & Send",
+                "/api/Tracking/"
+            ],
+            [
+                "suivi-colis",
+                "Health"
+            ]
+        ],
+        "query_id": 84
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Create Container Tracking",
+                "api_name": "Get Tracking Data",
+                "api_description": "The user will be able to retrieve the data using this endpoint.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "6045e2f44e1b233199a5e77a"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Pack & Send",
+                "api_name": "/api/Tracking/",
+                "api_description": "If you support your Pack & Send Reference Number, we can provide your with some relevant information.",
+                "required_parameters": [
+                    {
+                        "name": "reference",
+                        "type": "string",
+                        "description": "",
+                        "default": "ReferenceNumberHere"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "type": "str",
+                    "title": "str",
+                    "status": "int",
+                    "traceId": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "All",
+                "api_description": "Tout l'historique du colis depuis son envoi jusqu'au dernier \u00e9tat en cours.",
+                "required_parameters": [
+                    {
+                        "name": "colisid",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Turkey Postal Codes",
+                "api_name": "il",
+                "api_description": "Turkish plates. 1 to 81",
+                "required_parameters": [
+                    {
+                        "name": "il",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "34"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "success": "bool",
+                    "status": "str",
+                    "dataupdatedate": "str",
+                    "description": "str",
+                    "pagecreatedate": "str",
+                    "postakodu": [
+                        {
+                            "plaka": "int",
+                            "il": "str",
+                            "ilce": "str",
+                            "semt_bucak_belde": "str",
+                            "mahalle": "str",
+                            "pk": "str",
+                            "_list_length": 975
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "GS1Parser",
+                "api_name": "/parse",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "Machine- or human-readable GS1 barcode data.",
+                        "default": "(01)12345678901231(10)ABCD-123(30)27(11)211015"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "parser": {
+                        "request": {
+                            "data": "str",
+                            "service-level": "int",
+                            "invocation-id": "str",
+                            "source": "str",
+                            "genspec-compliance": "str",
+                            "doc-version": "str"
+                        },
+                        "response": {
+                            "state": "bool",
+                            "application-identifiers": [
+                                {
+                                    "AI01": {
+                                        "identifier": "str",
+                                        "datacontent": "str",
+                                        "hri": "str",
+                                        "mri": "str",
+                                        "rendered-content": {
+                                            "description": "str",
+                                            "issuing country": "str"
+                                        },
+                                        "description": "str",
+                                        "datatitle": "str",
+                                        "state": "bool",
+                                        "aiformat": {
+                                            "identifierlength": "int",
+                                            "mindatalength": "int",
+                                            "maxdatalength": "int",
+                                            "allowalphanumeric": "bool",
+                                            "terminatorrequired": "bool",
+                                            "gs1formatstring": "str",
+                                            "datatype": "str",
+                                            "unit": "str"
+                                        },
+                                        "messages": "empty list"
+                                    },
+                                    "_list_length": 4
+                                }
+                            ],
+                            "messages": "empty list"
+                        }
+                    }
+                }
+            }
+        ],
+        "query": "I need assistance in tracking the delivery of a package with the tracking ID 6045e2f44e1b233199a5e77a. Can you please keep me updated on its current status? Additionally, fetch the relevant information for the Pack & Send reference number 'ReferenceNumberHere'. Moreover, ensure that the suivi-colis API is functioning properly.",
+        "relevant APIs": [
+            [
+                "Create Container Tracking",
+                "Get Tracking Data"
+            ],
+            [
+                "Pack & Send",
+                "/api/Tracking/"
+            ],
+            [
+                "suivi-colis",
+                "Health"
+            ]
+        ],
+        "query_id": 85
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Create Container Tracking",
+                "api_name": "Get Tracking Data",
+                "api_description": "The user will be able to retrieve the data using this endpoint.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "6045e2f44e1b233199a5e77a"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Pack & Send",
+                "api_name": "/api/Tracking/",
+                "api_description": "If you support your Pack & Send Reference Number, we can provide your with some relevant information.",
+                "required_parameters": [
+                    {
+                        "name": "reference",
+                        "type": "string",
+                        "description": "",
+                        "default": "ReferenceNumberHere"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "type": "str",
+                    "title": "str",
+                    "status": "int",
+                    "traceId": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "All",
+                "api_description": "Tout l'historique du colis depuis son envoi jusqu'au dernier \u00e9tat en cours.",
+                "required_parameters": [
+                    {
+                        "name": "colisid",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Turkey Postal Codes",
+                "api_name": "il",
+                "api_description": "Turkish plates. 1 to 81",
+                "required_parameters": [
+                    {
+                        "name": "il",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "34"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "success": "bool",
+                    "status": "str",
+                    "dataupdatedate": "str",
+                    "description": "str",
+                    "pagecreatedate": "str",
+                    "postakodu": [
+                        {
+                            "plaka": "int",
+                            "il": "str",
+                            "ilce": "str",
+                            "semt_bucak_belde": "str",
+                            "mahalle": "str",
+                            "pk": "str",
+                            "_list_length": 975
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "GS1Parser",
+                "api_name": "/parse",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "Machine- or human-readable GS1 barcode data.",
+                        "default": "(01)12345678901231(10)ABCD-123(30)27(11)211015"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "parser": {
+                        "request": {
+                            "data": "str",
+                            "service-level": "int",
+                            "invocation-id": "str",
+                            "source": "str",
+                            "genspec-compliance": "str",
+                            "doc-version": "str"
+                        },
+                        "response": {
+                            "state": "bool",
+                            "application-identifiers": [
+                                {
+                                    "AI01": {
+                                        "identifier": "str",
+                                        "datacontent": "str",
+                                        "hri": "str",
+                                        "mri": "str",
+                                        "rendered-content": {
+                                            "description": "str",
+                                            "issuing country": "str"
+                                        },
+                                        "description": "str",
+                                        "datatitle": "str",
+                                        "state": "bool",
+                                        "aiformat": {
+                                            "identifierlength": "int",
+                                            "mindatalength": "int",
+                                            "maxdatalength": "int",
+                                            "allowalphanumeric": "bool",
+                                            "terminatorrequired": "bool",
+                                            "gs1formatstring": "str",
+                                            "datatype": "str",
+                                            "unit": "str"
+                                        },
+                                        "messages": "empty list"
+                                    },
+                                    "_list_length": 4
+                                }
+                            ],
+                            "messages": "empty list"
+                        }
+                    }
+                }
+            }
+        ],
+        "query": "My friend's birthday is coming up and I want to track the delivery of the gift package with the tracking ID 6045e2f44e1b233199a5e77a. Can you keep me informed about its current status? Additionally, fetch the latest updates for the Pack & Send reference number 'ReferenceNumberHere'. Lastly, ensure the suivi-colis API is functioning properly.",
+        "relevant APIs": [
+            [
+                "Create Container Tracking",
+                "Get Tracking Data"
+            ],
+            [
+                "Pack & Send",
+                "/api/Tracking/"
+            ],
+            [
+                "suivi-colis",
+                "Health"
+            ]
+        ],
+        "query_id": 87
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Create Container Tracking",
+                "api_name": "Get Tracking Data",
+                "api_description": "The user will be able to retrieve the data using this endpoint.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "6045e2f44e1b233199a5e77a"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Pack & Send",
+                "api_name": "/api/Tracking/",
+                "api_description": "If you support your Pack & Send Reference Number, we can provide your with some relevant information.",
+                "required_parameters": [
+                    {
+                        "name": "reference",
+                        "type": "string",
+                        "description": "",
+                        "default": "ReferenceNumberHere"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "type": "str",
+                    "title": "str",
+                    "status": "int",
+                    "traceId": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "All",
+                "api_description": "Tout l'historique du colis depuis son envoi jusqu'au dernier \u00e9tat en cours.",
+                "required_parameters": [
+                    {
+                        "name": "colisid",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Turkey Postal Codes",
+                "api_name": "il",
+                "api_description": "Turkish plates. 1 to 81",
+                "required_parameters": [
+                    {
+                        "name": "il",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "34"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "success": "bool",
+                    "status": "str",
+                    "dataupdatedate": "str",
+                    "description": "str",
+                    "pagecreatedate": "str",
+                    "postakodu": [
+                        {
+                            "plaka": "int",
+                            "il": "str",
+                            "ilce": "str",
+                            "semt_bucak_belde": "str",
+                            "mahalle": "str",
+                            "pk": "str",
+                            "_list_length": 975
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "GS1Parser",
+                "api_name": "/parse",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "Machine- or human-readable GS1 barcode data.",
+                        "default": "(01)12345678901231(10)ABCD-123(30)27(11)211015"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "parser": {
+                        "request": {
+                            "data": "str",
+                            "service-level": "int",
+                            "invocation-id": "str",
+                            "source": "str",
+                            "genspec-compliance": "str",
+                            "doc-version": "str"
+                        },
+                        "response": {
+                            "state": "bool",
+                            "application-identifiers": [
+                                {
+                                    "AI01": {
+                                        "identifier": "str",
+                                        "datacontent": "str",
+                                        "hri": "str",
+                                        "mri": "str",
+                                        "rendered-content": {
+                                            "description": "str",
+                                            "issuing country": "str"
+                                        },
+                                        "description": "str",
+                                        "datatitle": "str",
+                                        "state": "bool",
+                                        "aiformat": {
+                                            "identifierlength": "int",
+                                            "mindatalength": "int",
+                                            "maxdatalength": "int",
+                                            "allowalphanumeric": "bool",
+                                            "terminatorrequired": "bool",
+                                            "gs1formatstring": "str",
+                                            "datatype": "str",
+                                            "unit": "str"
+                                        },
+                                        "messages": "empty list"
+                                    },
+                                    "_list_length": 4
+                                }
+                            ],
+                            "messages": "empty list"
+                        }
+                    }
+                }
+            }
+        ],
+        "query": "I'm organizing a surprise party for my sister's graduation. Can you help me track the delivery of the gift package with the tracking ID 6045e2f44e1b233199a5e77a? Also, fetch the latest status of the package with the Pack & Send reference number 'ReferenceNumberHere'. Moreover, provide me with the current health status of the suivi-colis API.",
+        "relevant APIs": [
+            [
+                "Create Container Tracking",
+                "Get Tracking Data"
+            ],
+            [
+                "Pack & Send",
+                "/api/Tracking/"
+            ],
+            [
+                "suivi-colis",
+                "Health"
+            ]
+        ],
+        "query_id": 88
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "Pack & Send",
+                "api_name": "/api/Tracking/",
+                "api_description": "If you support your Pack & Send Reference Number, we can provide your with some relevant information.",
+                "required_parameters": [
+                    {
+                        "name": "reference",
+                        "type": "string",
+                        "description": "",
+                        "default": "ReferenceNumberHere"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "type": "str",
+                    "title": "str",
+                    "status": "int",
+                    "traceId": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Latest",
+                "api_description": "L'\u00e9tat courant (ie. le dernier \u00e9tat du colis).",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "country": {
+                        "code": "str",
+                        "iso": "str",
+                        "name": "str"
+                    },
+                    "date": "str",
+                    "informations": "str",
+                    "itemId": "str",
+                    "localisation": "str",
+                    "localization": {
+                        "longName": "str",
+                        "name": "str",
+                        "url": "str"
+                    },
+                    "pays": "str",
+                    "rawDateHeure": "str",
+                    "status": "str",
+                    "typeEvenement": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Health",
+                "api_description": "Get the API's health",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "status": "str",
+                    "checks": "empty list"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "suivi-colis",
+                "api_name": "Count",
+                "api_description": "Compte le nombre d'\u00e9tapes de l'historique, pratique pour limiter la consommation r\u00e9seau ou les ressources sur un IoT. Permet par exemple de poller un \u00e9tat de mani\u00e8re optimale.",
+                "required_parameters": [
+                    {
+                        "name": "colisId",
+                        "type": "string",
+                        "description": "",
+                        "default": "CA107308006SI"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "nbSteps": "int"
+                }
+            }
+        ],
+        "query": "I'm planning a surprise party for my colleague and I need to track the delivery of the party supplies. Can you provide me with the current status of the package with reference number YZA567? Additionally, I would like to check the health of the tracking API.",
+        "relevant APIs": [
+            [
+                "Pack & Send",
+                "/api/Tracking/"
+            ],
+            [
+                "suivi-colis",
+                "Latest"
+            ],
+            [
+                "suivi-colis",
+                "Health"
+            ]
+        ],
+        "query_id": 117
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Data",
+                "tool_name": "Random Word API",
+                "api_name": "Get Word by Start",
+                "api_description": "Returns a random word that starts with the specified string.\nFor example, \"fru\" will only return words that start with \"fru\", such as \"fruit\"",
+                "required_parameters": [
+                    {
+                        "name": "start",
+                        "type": "string",
+                        "description": "",
+                        "default": "fru"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "word": "str"
+                }
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "Random Word API",
+                "api_name": "Get Word by Length",
+                "api_description": "Returns a random word that has the specified length. For example, 7 will return any word that is 7 letters long, such as \"swallow\".",
+                "required_parameters": [
+                    {
+                        "name": "length",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "7"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "word": "str"
+                }
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "Random Word API",
+                "api_name": "Get Word by Length and Start",
+                "api_description": "Returns a random word of specified length and that starts with specified string.\nFor example, 7 and \"fru\" will return any word that is 7 letters long and starts with \"fru\", such as \"fruiter\".",
+                "required_parameters": [
+                    {
+                        "name": "length",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "7"
+                    },
+                    {
+                        "name": "start",
+                        "type": "string",
+                        "description": "",
+                        "default": "fru"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "word": "str"
+                }
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "US ZIP Code to Income",
+                "api_name": "ZIP code",
+                "api_description": "ZIP code",
+                "required_parameters": [
+                    {
+                        "name": "zip",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "0"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "x2y2",
+                "api_name": "x2y2 GET",
+                "api_description": "x2y2 API endpoint (https://api.x2y2.io)\nMake over 1000 requests / minute\n\nSimply copy the path into the x2y2_path header.\n\n![](https://i.ibb.co/WKYfTDy/x2y2-path-get-header.png)",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Data",
+                "tool_name": "Animals by API-Ninjas",
+                "api_name": "/v1/animals",
+                "api_description": "API Ninjas Animals API endpoint. Returns up to 10 results matching the input name parameter.",
+                "required_parameters": [
+                    {
+                        "name": "name",
+                        "type": "STRING",
+                        "description": "common name of animal to search. This parameter supports partial matches (e.g. fox will match gray fox and red fox)",
+                        "default": "cheetah"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "name": "str",
+                    "taxonomy": {
+                        "kingdom": "str",
+                        "phylum": "str",
+                        "class": "str",
+                        "order": "str",
+                        "family": "str",
+                        "genus": "str",
+                        "scientific_name": "str"
+                    },
+                    "locations": [
+                        "list of str with length 3"
+                    ],
+                    "characteristics": {
+                        "prey": "str",
+                        "name_of_young": "str",
+                        "group_behavior": "str",
+                        "estimated_population_size": "str",
+                        "biggest_threat": "str",
+                        "most_distinctive_feature": "str",
+                        "gestation_period": "str",
+                        "habitat": "str",
+                        "diet": "str",
+                        "average_litter_size": "str",
+                        "lifestyle": "str",
+                        "common_name": "str",
+                        "number_of_species": "str",
+                        "location": "str",
+                        "slogan": "str",
+                        "group": "str",
+                        "color": "str",
+                        "skin_type": "str",
+                        "top_speed": "str",
+                        "lifespan": "str",
+                        "weight": "str",
+                        "height": "str",
+                        "age_of_sexual_maturity": "str",
+                        "age_of_weaning": "str"
+                    }
+                }
+            }
+        ],
+        "query": "Could you please generate a 7-letter word that starts with 'fru' for a word search puzzle I'm creating? Additionally, find me the income data for the ZIP code 56789 to analyze the market potential in that area.",
+        "relevant APIs": [
+            [
+                "Random Word API",
+                "Get Word by Length and Start"
+            ],
+            [
+                "US ZIP Code to Income",
+                "ZIP code"
+            ]
+        ],
+        "query_id": 1645
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "get Id",
+                "api_description": "get the id of your movie",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "find similar",
+                "api_description": "find similar movies for your movie",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "24168-titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Latest Anime API",
+                "api_name": "Get Anime By Page",
+                "api_description": "Get Latest Anime by Page",
+                "required_parameters": [
+                    {
+                        "name": "num",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "2"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "error": {}
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Latest Anime API",
+                "api_name": "Get Latest  Anime",
+                "api_description": "Get latest anime data",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "anime_id": "str",
+                    "name": "str",
+                    "img_url": "str"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "MoviesDatabase",
+                "api_name": "/titles/seasons/{seriesId}",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "seriesId",
+                        "type": "STRING",
+                        "description": "Series Imdb Id",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "error": "str",
+                    "stack": "str",
+                    "results": "NoneType"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "MoviesDatabase",
+                "api_name": "/titles",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "genre",
+                        "type": "STRING",
+                        "description": "Year filter ex: ?genre=Drama",
+                        "default": ""
+                    },
+                    {
+                        "name": "startYear",
+                        "type": "NUMBER",
+                        "description": "Year range filter -from- ex: ?startYear=2020",
+                        "default": ""
+                    },
+                    {
+                        "name": "titleType",
+                        "type": "STRING",
+                        "description": "Filter by type of title",
+                        "default": ""
+                    },
+                    {
+                        "name": "list",
+                        "type": "STRING",
+                        "description": "Selected list -> most_pop_movies / most_pop_series / top_rated_series_250 / ...",
+                        "default": ""
+                    },
+                    {
+                        "name": "year",
+                        "type": "NUMBER",
+                        "description": "Year filter ex: ?year=2020",
+                        "default": ""
+                    },
+                    {
+                        "name": "sort",
+                        "type": "STRING",
+                        "description": "Add sorting (incr, decr) -> year.incr /year.decr",
+                        "default": ""
+                    },
+                    {
+                        "name": "page",
+                        "type": "STRING",
+                        "description": "Page number",
+                        "default": ""
+                    },
+                    {
+                        "name": "info",
+                        "type": "STRING",
+                        "description": "Info type structure (default: mini-info) -> base_info / mini_info / image / ...",
+                        "default": ""
+                    },
+                    {
+                        "name": "endYear",
+                        "type": "NUMBER",
+                        "description": "Year range filter -to- ex: ?endYear=2020",
+                        "default": ""
+                    },
+                    {
+                        "name": "limit",
+                        "type": "NUMBER",
+                        "description": "Number of titles per page (default: 10) -> 10 max ",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "page": "int",
+                    "next": "NoneType",
+                    "entries": "int",
+                    "results": "empty list"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "MoviesDatabase",
+                "api_name": "/titles/search/keyword/{keyword}",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "keyword",
+                        "type": "STRING",
+                        "description": "Keyword",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "info",
+                        "type": "STRING",
+                        "description": "Info type structure (default: mini-info) -> base_info / mini_info / image / ...",
+                        "default": ""
+                    },
+                    {
+                        "name": "year",
+                        "type": "NUMBER",
+                        "description": "Year filter ex: ?year=2020",
+                        "default": ""
+                    },
+                    {
+                        "name": "page",
+                        "type": "STRING",
+                        "description": "Page number",
+                        "default": ""
+                    },
+                    {
+                        "name": "startYear",
+                        "type": "NUMBER",
+                        "description": "Year range filter -from- ex: ?startYear=2020",
+                        "default": ""
+                    },
+                    {
+                        "name": "sort",
+                        "type": "STRING",
+                        "description": "Add sorting (incr, decr) -> year.incr /year.decr",
+                        "default": ""
+                    },
+                    {
+                        "name": "titleType",
+                        "type": "STRING",
+                        "description": "Filter by type of title",
+                        "default": ""
+                    },
+                    {
+                        "name": "limit",
+                        "type": "NUMBER",
+                        "description": "Number of titles per page (default: 10) -> 10 max ",
+                        "default": ""
+                    },
+                    {
+                        "name": "endYear",
+                        "type": "NUMBER",
+                        "description": "Year range filter -to- ex: ?endYear=2020",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "error": "str",
+                    "stack": "str",
+                    "results": "NoneType"
+                }
+            }
+        ],
+        "query": "I want to surprise my friends with a movie night and I need recommendations for movies similar to 'Titanic'. Can you find the movie ID for 'Titanic' and suggest some similar movies? Also, it would be great if you could provide the latest anime releases to add some excitement to our movie night.",
+        "relevant APIs": [
+            [
+                "Similar Movies",
+                "get Id"
+            ],
+            [
+                "Similar Movies",
+                "find similar"
+            ],
+            [
+                "Latest Anime API",
+                "Get Latest  Anime"
+            ]
+        ],
+        "query_id": 3460
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Movies",
+                "tool_name": "DAILY OVRLL 0822202130334",
+                "api_name": "/status/200",
+                "api_description": "Testing",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Movies NEWS",
+                "api_name": "movies_news_recent_get",
+                "api_description": "Get the most recent movies news from top sources\n10 news items will be returned per request",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "title": "str",
+                    "date": "str",
+                    "description": "str",
+                    "image": "str",
+                    "link": "str"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "DAILY OVRLL 0822202130418",
+                "api_name": "/status/200",
+                "api_description": "Testing",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "messages": "str",
+                    "info": "str"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "get Id",
+                "api_description": "get the id of your movie",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "find similar",
+                "api_description": "find similar movies for your movie",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "24168-titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            }
+        ],
+        "query": "I'm planning a family vacation and we're looking for some movie-themed attractions. Can you provide me with a list of movies similar to 'Titanic'? It would also be great if you could fetch recent news about movies for our entertainment. Thank you!",
+        "relevant APIs": [
+            [
+                "Similar Movies",
+                "find similar"
+            ],
+            [
+                "Movies NEWS",
+                "movies_news_recent_get"
+            ]
+        ],
+        "query_id": 3485
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Movies",
+                "tool_name": "DAILY OVRLL 0822202130334",
+                "api_name": "/status/200",
+                "api_description": "Testing",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Movies NEWS",
+                "api_name": "movies_news_recent_get",
+                "api_description": "Get the most recent movies news from top sources\n10 news items will be returned per request",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "title": "str",
+                    "date": "str",
+                    "description": "str",
+                    "image": "str",
+                    "link": "str"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "DAILY OVRLL 0822202130418",
+                "api_name": "/status/200",
+                "api_description": "Testing",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "messages": "str",
+                    "info": "str"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "get Id",
+                "api_description": "get the id of your movie",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "find similar",
+                "api_description": "find similar movies for your movie",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "24168-titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            }
+        ],
+        "query": "I'm a movie enthusiast and I'm always looking for recommendations. Can you suggest movies similar to 'Titanic'? Additionally, it would be great if you could provide me with recent news about movies to stay up-to-date. Thank you!",
+        "relevant APIs": [
+            [
+                "Similar Movies",
+                "find similar"
+            ],
+            [
+                "Movies NEWS",
+                "movies_news_recent_get"
+            ]
+        ],
+        "query_id": 3488
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Movies",
+                "tool_name": "DAILY OVRLL 0822202130334",
+                "api_name": "/status/200",
+                "api_description": "Testing",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Movies NEWS",
+                "api_name": "movies_news_recent_get",
+                "api_description": "Get the most recent movies news from top sources\n10 news items will be returned per request",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "title": "str",
+                    "date": "str",
+                    "description": "str",
+                    "image": "str",
+                    "link": "str"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "DAILY OVRLL 0822202130418",
+                "api_name": "/status/200",
+                "api_description": "Testing",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "messages": "str",
+                    "info": "str"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "get Id",
+                "api_description": "get the id of your movie",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "find similar",
+                "api_description": "find similar movies for your movie",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "24168-titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            }
+        ],
+        "query": "I'm a movie critic and I'm always on the lookout for great movies. Can you recommend some movies similar to 'Titanic'? It would also be helpful to have recent news about movies to stay informed. Thank you!",
+        "relevant APIs": [
+            [
+                "Similar Movies",
+                "find similar"
+            ],
+            [
+                "Movies NEWS",
+                "movies_news_recent_get"
+            ]
+        ],
+        "query_id": 3492
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "get Id",
+                "api_description": "get the id of your movie",
+                "required_parameters": [
+                    {
+                        "name": "q",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Similar Movies",
+                "api_name": "find similar",
+                "api_description": "find similar movies for your movie",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "24168-titanic"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "movies:": [
+                        "list of list with length 1"
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Movie, TV, music search and download",
+                "api_name": "Search Torrents",
+                "api_description": "Get downloadable  torrent link by movie name.",
+                "required_parameters": [
+                    {
+                        "name": "keywords",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "Fast X 2023"
+                    },
+                    {
+                        "name": "quantity",
+                        "type": "NUMBER",
+                        "description": "MAX:40",
+                        "default": "40"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "1"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "code": "str",
+                    "keyword": "str",
+                    "quantity": "int",
+                    "result": [
+                        {
+                            "title": "str",
+                            "torrent": "str",
+                            "size": "str",
+                            "rate": "int",
+                            "_list_length": 40
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Movie, TV, music search and download",
+                "api_name": "Get Monthly Top 100 Movies Torrents",
+                "api_description": "Monthly Top 100 Movies Torrents",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "code": "str",
+                    "result": [
+                        {
+                            "title": "str",
+                            "torrent": "str",
+                            "size": "str",
+                            "rate": "int",
+                            "_list_length": 100
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Movie, TV, music search and download",
+                "api_name": "Get Monthly Top 100 Games Torrents",
+                "api_description": "Monthly Top 100 Games Torrents",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "code": "str",
+                    "result": [
+                        {
+                            "title": "str",
+                            "torrent": "str",
+                            "size": "str",
+                            "rate": "int",
+                            "_list_length": 100
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "MoviesDatabase",
+                "api_name": "/titles/{id}/aka",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "Imdb Id of title ex: tt0000002",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "error": "str",
+                    "stack": "str",
+                    "results": "NoneType"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "MoviesDatabase",
+                "api_name": "/actors",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "STRING",
+                        "description": "Page number",
+                        "default": ""
+                    },
+                    {
+                        "name": "limit",
+                        "type": "NUMBER",
+                        "description": "Number of titles per page (default: 10) -> 10 max ",
+                        "default": ""
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "page": "int",
+                    "next": "str",
+                    "entries": "int",
+                    "results": [
+                        {
+                            "_id": "str",
+                            "nconst": "str",
+                            "primaryName": "str",
+                            "birthYear": "int",
+                            "deathYear": "int",
+                            "primaryProfession": "str",
+                            "knownForTitles": "str",
+                            "_list_length": 10
+                        }
+                    ]
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "MoviesDatabase",
+                "api_name": "/actors/{id}",
+                "api_description": " ",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "STRING",
+                        "description": "Actor imdb id",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "error": "str",
+                    "stack": "str",
+                    "results": "NoneType"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "Star Wars Characters",
+                "api_name": "Get all characters",
+                "api_description": "Get all characters with all details",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "id": "int",
+                    "mass": "str",
+                    "name": "str",
+                    "gender": "str",
+                    "height": "str",
+                    "species": "str",
+                    "eye_color": "str",
+                    "homeworld": "str",
+                    "birth_year": "str",
+                    "hair_color": "str",
+                    "skin_color": "str"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "OTT details",
+                "api_name": "Title Details",
+                "api_description": "Get basic information on a movie or tv show such as imdbid , title , genre , runtime , imdbrating , language , synopsis , type , imageurl  , Streaming platforms info etc.",
+                "required_parameters": [
+                    {
+                        "name": "imdbid",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "tt9904802"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "imageurl": [
+                        "list of str with length 1"
+                    ],
+                    "genre": [
+                        "list of str with length 1"
+                    ],
+                    "imdbid": "str",
+                    "title": "str",
+                    "runtime": "str",
+                    "imdbrating": "float",
+                    "released": "int",
+                    "synopsis": "str",
+                    "type": "str",
+                    "language": [
+                        "list of str with length 4"
+                    ],
+                    "streamingAvailability": {
+                        "country": {
+                            "US": [
+                                {
+                                    "url": "str",
+                                    "platform": "str",
+                                    "_list_length": 9
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "OTT details",
+                "api_name": "New Arrivals",
+                "api_description": "Get the latest arrivals from different platforms .",
+                "required_parameters": [
+                    {
+                        "name": "region",
+                        "type": "STRING",
+                        "description": "Use 'IN' for India and 'US' for USA , * currently we support only US and Indian region.",
+                        "default": "US"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "1"
+                    }
+                ],
+                "method": "GET",
+                "template_response": {
+                    "page": "int",
+                    "results": "empty list"
+                }
+            },
+            {
+                "category_name": "Movies",
+                "tool_name": "OTT details",
+                "api_name": "OTT Providers",
+                "api_description": "Get  information on OTT platforms we suuport .",
+                "required_parameters": [
+                    {
+                        "name": "region",
+                        "type": "STRING",
+                        "description": "currently only USA and India region is supported enter param 'US' for USA and 'IN' for India.",
+                        "default": "IN"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm a filmmaker and I need inspiration for my next project. Can you recommend some similar movies to 'The Shawshank Redemption' and provide their IMDb ratings? Also, fetch the title details for these movies, including their genres, runtimes, and available streaming platforms.",
+        "relevant APIs": [
+            [
+                "Similar Movies",
+                "find similar"
+            ],
+            [
+                "OTT details",
+                "Title Details"
+            ]
+        ],
+        "query_id": 3609
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Financial",
+                "tool_name": "Mutual fund Nav",
+                "api_name": "fundID",
+                "api_description": "current Nav",
+                "required_parameters": [
+                    {
+                        "name": "ID",
+                        "type": "STRING",
+                        "description": "FundID",
+                        "default": ""
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Financial",
+                "tool_name": "Crypto Symbols by API-Ninjas",
+                "api_name": "/v1/cryptosymbols",
+                "api_description": "API Ninjas Crypto Symbols API",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "symbols": [
+                        "list of str with length 522"
+                    ],
+                    "timestamp": "int"
+                }
+            }
+        ],
+        "query": "My company is organizing a charity event and we need to raise funds. Can you retrieve the current NAV for the mutual fund with ID 'XYZ789'? Additionally, we want to explore potential cryptocurrencies to invest in. Please provide the list of crypto symbols and their corresponding timestamp.",
+        "relevant APIs": [
+            [
+                "Mutual fund Nav",
+                "fundID"
+            ],
+            [
+                "Crypto Symbols by API-Ninjas",
+                "/v1/cryptosymbols"
+            ]
+        ],
+        "query_id": 4743
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Amazon Scrapper_v4",
+                "api_name": "GET a product details",
+                "api_description": "GET a product details.\nYou can get the product id from the URL when you search for a particular product. It is the next value after '/dp/'.\nEg: B08N5WG761 is the value we want from the url - \nhttps://www.amazon.in/Apple-MacBook-Chip-13-inch-256GB/dp/B08N5WG761/",
+                "required_parameters": [
+                    {
+                        "name": "productId",
+                        "type": "string",
+                        "description": "",
+                        "default": "B08N5WG761"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Amazon Scrapper_v4",
+                "api_name": "GET search results",
+                "api_description": "GET search results",
+                "required_parameters": [
+                    {
+                        "name": "searchQuery",
+                        "type": "string",
+                        "description": "",
+                        "default": "sdfsdf"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Amazon Scrapper_v4",
+                "api_name": "GET a product offers",
+                "api_description": "GET a product offers",
+                "required_parameters": [
+                    {
+                        "name": "productId",
+                        "type": "string",
+                        "description": "",
+                        "default": "sdfsdfdsf"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Shopify Store Scraper",
+                "api_name": "Single Product",
+                "api_description": "Fetch complete data of single product.",
+                "required_parameters": [
+                    {
+                        "name": "url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "https://row.gymshark.com"
+                    },
+                    {
+                        "name": "handle",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "gymshark-studio-leggings-black-ss22"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "eCommerce",
+                "tool_name": "Shopify Store Scraper",
+                "api_name": "Shopify Store Products",
+                "api_description": "Get all the products of shopify store.",
+                "required_parameters": [
+                    {
+                        "name": "page",
+                        "type": "NUMBER",
+                        "description": "",
+                        "default": "1"
+                    },
+                    {
+                        "name": "url",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "https://row.gymshark.com"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            }
+        ],
+        "query": "I'm starting a new project for my company and I need some equipment. Can you provide me with details of a specific product with the ID B08N5WG761 on Amazon? Also, fetch the search results for the query 'sdfsdf' on Amazon and recommend some products that might be suitable for the project. Additionally, please suggest some popular products from the Gymshark store that my employees might find useful.",
+        "relevant APIs": [
+            [
+                "Amazon Scrapper_v4",
+                "GET a product details"
+            ],
+            [
+                "Amazon Scrapper_v4",
+                "GET search results"
+            ],
+            [
+                "Shopify Store Scraper",
+                "Shopify Store Products"
+            ]
+        ],
+        "query_id": 5741
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Email",
+                "tool_name": "Email Validator_v3",
+                "api_name": "Email Validate Regex",
+                "api_description": "Email Validate Regex",
+                "required_parameters": [
+                    {
+                        "name": "email",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "test@gmail.com"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Email",
+                "tool_name": "Temp Mail",
+                "api_name": "Read Inbox",
+                "api_description": "Read inbox an email",
+                "required_parameters": [
+                    {
+                        "name": "email",
+                        "type": "string",
+                        "description": "",
+                        "default": "p1amvpvxfh@bestparadize.com"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "code": "int",
+                    "message": "str",
+                    "request_id": "str"
+                }
+            },
+            {
+                "category_name": "Email",
+                "tool_name": "account verifyer",
+                "api_name": "Instagram account verifyer",
+                "api_description": "to verify Instagram account",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Email",
+                "tool_name": "Emails Verifier",
+                "api_name": "Verify Email",
+                "api_description": "Allows verifying email addresses. Checks if emails are deliverable.",
+                "required_parameters": [
+                    {
+                        "name": "query",
+                        "type": "STRING",
+                        "description": "Email address (e.g., support@outscraper.com).",
+                        "default": "support@outscraper.com"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm organizing a charity event and I want to ensure the validity of the email addresses of the participants. Please validate the emails of the participants using the Email Validate Regex API. Moreover, read the inbox messages for the email address p1amvpvxfh@bestparadize.com using the Read Inbox API to check for any important updates or donation confirmations.",
+        "relevant APIs": [
+            [
+                "Email Validator_v3",
+                "Email Validate Regex"
+            ],
+            [
+                "Temp Mail",
+                "Read Inbox"
+            ]
+        ],
+        "query_id": 7256
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Email",
+                "tool_name": "Email Validator_v3",
+                "api_name": "Email Validate Regex",
+                "api_description": "Email Validate Regex",
+                "required_parameters": [
+                    {
+                        "name": "email",
+                        "type": "STRING",
+                        "description": "",
+                        "default": "test@gmail.com"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Email",
+                "tool_name": "Temp Mail",
+                "api_name": "Read Inbox",
+                "api_description": "Read inbox an email",
+                "required_parameters": [
+                    {
+                        "name": "email",
+                        "type": "string",
+                        "description": "",
+                        "default": "p1amvpvxfh@bestparadize.com"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "code": "int",
+                    "message": "str",
+                    "request_id": "str"
+                }
+            },
+            {
+                "category_name": "Email",
+                "tool_name": "account verifyer",
+                "api_name": "Instagram account verifyer",
+                "api_description": "to verify Instagram account",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Email",
+                "tool_name": "Emails Verifier",
+                "api_name": "Verify Email",
+                "api_description": "Allows verifying email addresses. Checks if emails are deliverable.",
+                "required_parameters": [
+                    {
+                        "name": "query",
+                        "type": "STRING",
+                        "description": "Email address (e.g., support@outscraper.com).",
+                        "default": "support@outscraper.com"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "message": "str"
+                }
+            }
+        ],
+        "query": "I'm a teacher and I want to validate the email addresses of my students. Can you validate the emails of my students using the Email Validate Regex API? Additionally, fetch the inbox messages for the email address p1amvpvxfh@bestparadize.com using the Read Inbox API to check for any important class updates or assignment submissions.",
+        "relevant APIs": [
+            [
+                "Email Validator_v3",
+                "Email Validate Regex"
+            ],
+            [
+                "Temp Mail",
+                "Read Inbox"
+            ]
+        ],
+        "query_id": 7259
+    },
+    {
+        "api_list": [
+            {
+                "category_name": "Logistics",
+                "tool_name": "TrackingMore_v2",
+                "api_name": "carriers/list",
+                "api_description": "List all supported carriers",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "TrackingMore_v2",
+                "api_name": "packages/track (Deprecated)",
+                "api_description": "Get tracking information of specific package",
+                "required_parameters": [
+                    {
+                        "name": "carrierCode",
+                        "type": "STRING",
+                        "description": "Carrier code gotten from .../carriers/list or carriers/detect endpoint",
+                        "default": "yunexpress"
+                    },
+                    {
+                        "name": "trackingNumber",
+                        "type": "STRING",
+                        "description": "Tracking number of package",
+                        "default": "YT2003521266065328"
+                    }
+                ],
+                "optional_parameters": [
+                    {
+                        "name": "lang",
+                        "type": "STRING",
+                        "description": "One of the following : en|cn|es|it|ru",
+                        "default": "en"
+                    }
+                ],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "TrackingMore_v2",
+                "api_name": "carriers/detect",
+                "api_description": "Detect carrier by providing tracking number",
+                "required_parameters": [
+                    {
+                        "name": "trackingNumber",
+                        "type": "STRING",
+                        "description": "The tracking number of parcel",
+                        "default": "YT2003521266065328"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Create Container Tracking",
+                "api_name": "Get Tracking Data",
+                "api_description": "The user will be able to retrieve the data using this endpoint.",
+                "required_parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "description": "",
+                        "default": "6045e2f44e1b233199a5e77a"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Pack & Send",
+                "api_name": "/api/Tracking/",
+                "api_description": "If you support your Pack & Send Reference Number, we can provide your with some relevant information.",
+                "required_parameters": [
+                    {
+                        "name": "reference",
+                        "type": "string",
+                        "description": "",
+                        "default": "ReferenceNumberHere"
+                    }
+                ],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "type": "str",
+                    "title": "str",
+                    "status": "int",
+                    "traceId": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "Kargom Nerede",
+                "api_name": "companies",
+                "api_description": "Companies",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET",
+                "template_response": {
+                    "value": [
+                        {
+                            "id": "int",
+                            "name": "str",
+                            "image": "str",
+                            "info": "NoneType",
+                            "additionalDatas": "NoneType",
+                            "_list_length": 31
+                        }
+                    ],
+                    "success": "bool",
+                    "message": "str"
+                }
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "SQUAKE",
+                "api_name": "Checkhealth",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            },
+            {
+                "category_name": "Logistics",
+                "tool_name": "SQUAKE",
+                "api_name": "Projects",
+                "api_description": " ",
+                "required_parameters": [],
+                "optional_parameters": [],
+                "method": "GET"
+            }
+        ],
+        "query": "I'm organizing a charity event and we need to send donation packages to different companies. Can you fetch the information of the companies we can partner with for this cause? Also, check if the companies support package tracking using reference numbers.",
+        "relevant APIs": [
+            [
+                "Kargom Nerede",
+                "companies"
+            ],
+            [
+                "Pack & Send",
+                "/api/Tracking/"
+            ]
+        ],
+        "query_id": 29591
+    }
+]
